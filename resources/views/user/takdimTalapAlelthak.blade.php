@@ -27,21 +27,21 @@
                <div class="container">
                     <div class="row">
                         <div class="form-group col-3">
-                          <input   type="radio" name="nationality" value="male" checked> مصري<br>
+                          <input type="radio" name="nationality" value="egyptian" checked> مصري<br>
                         </div>
                         
                         <div class="form-group col-3">
-                          <input   type="radio" name="nationality" value="female"> وافد<br>
+                          <input type="radio" name="nationality" value="expat"> وافد<br>
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class=" form-group col-3">
-                          <input   type="radio" name="Kind_of_student" value="tolapkodama" checked> طلاب قدامي<br>
+                          <input   type="radio" name="Kind_of_student" value="old" checked> طلاب قدامي<br>
                         </div>
                         
                         <div class="form-group col-4">
-                          <input  type="radio" name="Kind_of_student" value="tolapmostgdin">طلاب مستجدين<br>
+                          <input  type="radio" name="Kind_of_student" value="new">طلاب مستجدين<br>
                         </div>
                     </div>
                     <div class="row">
@@ -87,11 +87,22 @@
                            <label> محل الاقامه<bdi>:</bdi> </label>
                       </div>
                     <div class="form-group col-3">
-                        <select  name="residance"class="form-control">
-                        <option  value="" ></option>
-                        <option  value=" bahary">وجه بحري</option>
-                        <option  value="kibly">وجه قبلي</option>
-                        <option  value="saina">سيناء</option>
+                        <select name="residance" class="form-control" required>
+                        <option value="bahary" 
+                        @if(old("residance") == "bahary")
+                          {{ "selected" }}
+                        @endif
+                        >وجه بحري</option>
+                        <option value="kibly"
+                        @if(old("residance") == "kibly")
+                          {{ "selected" }}
+                        @endif
+                        >وجه قبلي</option>
+                        <option value="saina"
+                        @if(old("residance") == "saina")
+                          {{ "selected" }}
+                        @endif
+                        >سيناء</option>
                         
                       </select>
                     </div>
@@ -358,7 +369,7 @@
                                  <label> رقم البطاقه<bdi>:</bdi> </label>
                                </div>
                                <div class=" form-group col-3">
-                                 <input type="text"  class="form-control"  name="damin_ssn" value="{{old('damin_ssn')}}" required >
+                                 <input type="text"  class="form-control"  name="damin_snn" value="{{old('damin_snn')}}" required >
                                </div>
                          </div>
                          <div class="row">
@@ -470,7 +481,7 @@
                     </div>
                     <div class="row">
                        <div class="form-group col-12">
-                           <textarea class="form-control" name="message" value="{{old('message')}}" required placeholder="مخالفات قانونيه"></textarea>
+                           <textarea class="form-control" name="message" required placeholder="مخالفات قانونيه">{{old('message')}}</textarea>
                        </div>
                    </div>
                    <div class="card1  mb-3">
@@ -495,7 +506,7 @@
                                 </ul>
                         <div class="row">
                             <div class=" form-group col-12">
-                                <input type="radio" name="ekrar" value="{{old('ekrar')}}" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
+                                <input type="radio" name="ekrar" value="on" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
                                           نهائيا من المدينه <br>
                             </div>
                         </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\MessageBag;
 class requestController extends Controller
@@ -37,47 +38,46 @@ class requestController extends Controller
     {
         $request->validate([
             'nationality' => ['required'],
-             'Kind_of_student' => ['required'],
-             'studentName' => ['required'],
-             'studentSnn' => ['required'],
-             'code' => ['required'],
-             'birthday' => ['required'],
-             'residance' =>['required'],
-             'address' =>['required'],
-             'email' => ['required'],
-             'studentMobile' => ['required'],
-             'student_year' => ['required'],
-             'collage' => ['required'],
-             'peciture' => ['required'],
-             'password' => ['required'],
-             'sure_password' => ['required'],
-             'father_name' => ['required'],
-             'relation' => ['required'],
-             'father_snn' => ['required'],
-             'father_job' => ['required'],
-             'father_mobile' => ['required'],
-             'father_id' => ['required'],
-             'type_of_stay' => ['required'],
-             'grade' => ['required'],
-             'taqdir' => ['required'],
-             'rate' => ['required'],
-                //    'department' => ['required'],
-                //     'sum' => ['required'],
-                    'damin_name' => ['required'],
-                     'damin_snn' => ['required'],
-                     'damin_mobile' => ['required'],
-                      'damin_job' => ['required'],
-                      'damin_id' => ['required'],
-                       'income' => ['required'],
-                      'number' => ['required'],
-                       'build' => ['required'],
-                       'room_id'=> ['required'],
-                       'message' => ['required'],
-                        'ekrar' => ['required'],
-             
+            'Kind_of_student' => ['required'],
+            'studentName' => ['required'],
+            'studentSnn' => ['required', 'numeric'],
+            'code' => ['required'],
+            'birthday' => ['required'],
+            'residance' =>['required'],
+            'address' =>['required'],
+            'email' => ['required'],
+            'studentMobile' => ['required'],
+            'student_year' => ['required'],
+            'collage' => ['required'],
+            //'peciture' => ['required'],
+            'password' => ['required'],
+            'sure_password' => ['required'],
+            'father_name' => ['required'],
+            'relation' => ['required'],
+            'father_snn' => ['required'],
+            'father_job' => ['required'],
+            'father_mobile' => ['required'],
+            //'father_id' => ['required'],
+            'type_of_stay' => ['required'],
+            'grade' => ['required'],
+            'taqdir' => ['required'],
+            'rate' => ['required'],
+            //    'department' => ['required'],
+            //     'sum' => ['required'],
+            'damin_name' => ['required'],
+            'damin_snn' => ['required'],
+            'damin_mobile' => ['required'],
+            'damin_job' => ['required'],
+            //'damin_id' => ['required'],
+            'income' => ['required'],
+            'number' => ['required'],
+            'build' => ['required'],
+            'room_id'=> ['required'],
+            'message' => ['required'],
+            'ekrar' => ['required'],
          ]);
-        return $request->all();
-         student::create([
+         
+         Student::create([
              'nationality' => $request['nationality'],
              'Kind_of_student' =>$request['Kind_of_student'],
              'studentName' =>$request['studentName'],
@@ -90,8 +90,8 @@ class requestController extends Controller
              'studentMobile' =>$request['studentMobile'],
              'student_year' =>$request['student_year'],
              'collage' =>$request['collage'],
-             'student_id' =>$request['student_id']->store('images','public'),
-             'peciture' =>$request['peciture']->store('images','public'),
+             'student_id' => 111,
+             'peciture' => 'test',
              'password' =>$request['password'],
              'sure_password' =>$request['sure_password'],
              'father_name' =>$request['father_name'],
@@ -99,7 +99,7 @@ class requestController extends Controller
              'father_snn' =>$request['father_snn'], 
              'father_job' =>$request['father_job'], 
              'father_mobile' =>$request['father_mobile'],
-             'father_id' =>$request['father_id']->store('images','public'),
+             'father_id' => 11,
              'type_of_stay' =>$request['type_of_stay'],
              'grade' =>$request['grade'],
              'taqdir' =>$request['taqdir'],
@@ -107,20 +107,21 @@ class requestController extends Controller
         //   'department' =>$request['department'],
         //   'sum' =>$request['sum'],
             'damin_name' =>$request['damin_name'],
-            'damin_ssn' =>$request['damin_snn'],
+            'damin_snn' =>$request['damin_snn'],
             'damin_mobile'=>$request['damin_mobile'],
             'damin_job' =>$request['damin_job'],
-            'damin_id' =>$request['damin_id']->store('images','public'),
+            'damin_id' => 11,
             'income' =>$request['income'],
             'number' =>$request['number'], 
             'build' =>$request['build'],
-            'build' =>$request['room_id'],
+            'room_id' =>$request['room_id'],
             'message' =>$request['message'],
             'ekrar' =>$request['ekrar'],
   
         ]);
+         
         session()->flash('success','تم تقديم الطلب بنجاح');
-        return redirect(route('/takdimTalapAlelthak'));
+        return redirect()->back();
     }
 
     /**

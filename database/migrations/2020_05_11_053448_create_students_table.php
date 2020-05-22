@@ -25,7 +25,7 @@ class CreateStudentsTable extends Migration
             $table->string('address');
             $table->string('email');
             $table->integer('studentMobile');
-            $table->integer(' student_year');
+            $table->integer('student_year');
             $table->string('collage');
             $table->integer('student_id');
             $table->string('peciture');
@@ -43,15 +43,15 @@ class CreateStudentsTable extends Migration
             $table->string('rate');
             // $table->string('department');
             // $table->string('sum');
-            $table->string(' damin_name');
+            $table->string('damin_name');
             $table->integer('damin_snn');
             $table->integer('damin_mobile');
             $table->string('damin_job');
             $table->integer('damin_id');
             $table->string('income');
             $table->integer('number');
-            $table->string(' build');
-            $table->string(' room_id');
+            $table->string('build');
+            $table->string('room_id');
             $table->string('message');
             $table->text('ekrar');
             $table->timestamps();
