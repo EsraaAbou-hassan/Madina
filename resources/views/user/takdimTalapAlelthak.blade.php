@@ -27,21 +27,21 @@
                <div class="container">
                     <div class="row">
                         <div class="form-group col-3">
-                          <input   type="radio" name="nationality" value="male" checked> مصري<br>
+                          <input type="radio" name="nationality" value="مصري" checked> مصري<br>
                         </div>
                         
                         <div class="form-group col-3">
-                          <input   type="radio" name="nationality" value="female"> وافد<br>
+                          <input type="radio" name="nationality" value="وافد"> وافد<br>
                         </div>
                     </div>
                     
                     <div class="row">
                         <div class=" form-group col-3">
-                          <input   type="radio" name="Kind_of_student" value="tolapkodama" checked> طلاب قدامي<br>
+                          <input   type="radio" name="Kind_of_student" value="قديم" checked> طلاب قدامي<br>
                         </div>
                         
                         <div class="form-group col-4">
-                          <input  type="radio" name="Kind_of_student" value="tolapmostgdin">طلاب مستجدين<br>
+                          <input  type="radio" name="Kind_of_student"value="حديث" >طلاب مستجدين<br>
                         </div>
                     </div>
                     <div class="row">
@@ -49,7 +49,7 @@
                         <label > اسم الطالب <bdi>:</bdi> </label>
                           </div>
                           <div class="form-group col-3">
-                        <input class="form-control" type="text"  name="studentName" value="{{old('studentName')}}" required placeholder="الإسم رباعي باللغة العربية">
+                        <input class="form-control" type="text"  name="student_name" value="{{old('student_name')}}" required placeholder="الإسم رباعي باللغة العربية">
                   </div>
                   
                     </div>
@@ -59,7 +59,7 @@
                   <label> الرقم القومى<bdi>:</bdi> </label>
                       </div>
                     <div class="form-group col-3">
-                  <input type="text" class="form-control" name="studentSnn" value="{{old('studentSnn')}}" required >
+                  <input type="text" class="form-control" name="student_ssn" value="{{old('student_ssn')}}" required >
               </div>
                  </div>
                  
@@ -87,11 +87,22 @@
                            <label> محل الاقامه<bdi>:</bdi> </label>
                       </div>
                     <div class="form-group col-3">
-                        <select  name="residance"class="form-control">
-                        <option  value="" ></option>
-                        <option  value=" bahary">وجه بحري</option>
-                        <option  value="kibly">وجه قبلي</option>
-                        <option  value="saina">سيناء</option>
+                        <select name="residance" class="form-control" required>
+                        <option value="bahary" 
+                        @if(old("residance") == "bahary")
+                          {{ "selected" }}
+                        @endif
+                        >وجه بحري</option>
+                        <option value="kibly"
+                        @if(old("residance") == "kibly")
+                          {{ "selected" }}
+                        @endif
+                        >وجه قبلي</option>
+                        <option value="saina"
+                        @if(old("residance") == "saina")
+                          {{ "selected" }}
+                        @endif
+                        >سيناء</option>
                         
                       </select>
                     </div>
@@ -120,7 +131,7 @@
                         <label> رقم الموبيل<bdi>:</bdi> </label>
                          </div>
                     <div class="form-group col-3">
-                        <input type="text" name="studentMobile" value="{{old('studentMobile')}}" required class="form-control" >
+                        <input type="text" name="student_mobile" value="{{old('student_mobile')}}" required class="form-control" >
                     </div>
                   
                   </div>
@@ -204,7 +215,7 @@
                         <label> الرقم القومي<bdi>:</bdi> </label>
                         </div>
                     <div class="form-group col-3">
-                        <input type="text"  name="father_snn" value="{{old('father_snn')}}" required class="form-control" >
+                        <input type="text"  name="father_ssn" value="{{old('father_ssn')}}" required class="form-control" >
                   </div>
                   </div>
                   <div class="row">
@@ -395,7 +406,7 @@
              </div>
          <div class="card-body text-secondary" >
               <div class="container">
-                    <div class="row">
+                    <!-- <div class="row">
                           <div class="form-group col-3">
                              <label > اسم ولي الأمر <bdi>:</bdi> </label>
                           </div>
@@ -403,29 +414,29 @@
                              <input type="text" class="form-control" name="father_name" value="{{old('father_name')}}" required placeholder="الإسم رباعي باللغة العربية">
                           </div>
                     </div>
-                  
-                   <div class="row">
+                   -->
+                   <!-- <div class="row">
                       <div class="form-group col-3">
                           <label> الرقم القومى<bdi>:</bdi> </label>
                       </div>
                       <div class="form-group col-3">
-                           <input type="text" name="father_ssn" value="{{old('father_ssn')}}" required class="form-control">
+                           <input type="text" name="father_snn" value="{{old('father_snn')}}" required class="form-control">
                       </div>
                    </div>
-                 
+                  -->
                   
-                   <div class="row">
+                   <!-- <div class="row">
                        <div class="form-group col-3">
                          <label> الوظيفه <bdi>:</bdi> </label>
                        </div>
                        <div class=" form-group col-3">
                           <input type="text"  name="father_job" value="{{old('father_job')}}" required class="form-control" >
                        </div>
-                   </div>
+                   </div> -->
                    
                    <div class="row">
                       <div class=" form-group col-3">
-                          <label> الدخل<bdi>:</bdi> </label>
+                          <label> دخل الأسره<bdi>:</bdi> </label>
                       </div>
                       <div class=" form-group col-3">
                          <input type="text" name="income" value="{{old('income')}}" required  class="form-control">
@@ -470,7 +481,7 @@
                     </div>
                     <div class="row">
                        <div class="form-group col-12">
-                           <textarea class="form-control" name="message" value="{{old('message')}}" required placeholder="مخالفات قانونيه"></textarea>
+                           <textarea class="form-control" name="message" required placeholder="مخالفات قانونيه">{{old('message')}}</textarea>
                        </div>
                    </div>
                    <div class="card1  mb-3">
@@ -495,7 +506,7 @@
                                 </ul>
                         <div class="row">
                             <div class=" form-group col-12">
-                                <input type="radio" name="ekrar" value="{{old('ekrar')}}" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
+                                <input type="radio" name="ekrar" value="on" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
                                           نهائيا من المدينه <br>
                             </div>
                         </div>

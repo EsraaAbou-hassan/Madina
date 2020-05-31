@@ -15,6 +15,7 @@
      
   </head>
     <body>
+    
             <table class="table table-head-fixed text-nowrap">
                             <thead>
                                 <tr>
@@ -62,19 +63,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                            @foreach($students as $student)
+                        @foreach($students as $student)
                             <tr>
-                                    <td>{$student->id}}</td>
-                                    <td>{$student->studentName}}</td>
+                                    <td>{{$student->id}}</td>
+                                    <td>{{$student->student_name}}</td>
                                     <td>{{$student->email}}</td>
                                     <td>{{$student-> nationality}}</td>
                                     <td>{{$student-> Kind_of_student}}</td>
-                                    <td>{{$student-> studentSnn}}</td> 
+                                    <td>{{$student-> student_id}}</td>
+                                    <td>{{$student->  student_ssn}}</td> 
                                     <td>{{$student-> code}}</td>
                                     <td>{{$student-> birthday}}</td> 
                                     <td>{{$student-> residance}}</td>
                                     <td>{{$student-> address}}</td>
-                                    <td>{{$student-> studentMobile}}</td>
+                                    <td>{{$student-> student_mobile}}</td>
                                     <td>{{$student-> student_year}}</td>
                                     <td>{{$student-> collage}}</td>
                                     <td>{{$student-> peciture}}</td>
@@ -82,7 +84,7 @@
                                     <td>{{$student-> sure_password}}</td>
                                     <td>{{$student-> father_name}}</td>
                                     <td>{{$student-> relation}}</td>
-                                    <td>{{$student-> father_snn}}</td>
+                                    <td>{{$student-> father_ssn}}</td>
                                     <td>{{$student-> nationality}}</td>
                                     <td>{{$student-> father_job}}</td>
                                     <td>{{$student-> father_mobile}}</td>
@@ -91,15 +93,16 @@
                                     <td>{{$student-> grade}}</td>
                                     <td>{{$student-> taqdir}}</td>
                                     <td>{{$student-> rate}}</td>
-                                    <td>{{$student->department }}</td>
-                                    <td>{{$student-> sum}}</td>
+                                    <!-- <td>{{$student->department }}</td>
+                                    <td>{{$student-> sum}}</td> -->
                                     <td>{{$student-> damin_name}}</td>
-                                    <td>{{$student-> damin_snn}}</td>
+                                    <td>{{$student-> damin_ssn}}</td>
                                     <td>{{$student-> damin_mobile}}</td> 
                                     <td>{{$student-> damin_job}}</td>
                                     <td>{{$student-> damin_id}}</td>
                                     <td>{{$student-> income}}</td>
                                     <td>{{$student-> build}}</td>
+                                    <td>{{$student-> room_id}}</td>
                                     <td>{{$student->message }}</td>
                                     <td>{{$student-> ekrar}}</td>
                                     <td>{{$student->created_at}}</td>
