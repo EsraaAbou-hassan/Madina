@@ -46,8 +46,8 @@
                   <tbody>
                   @foreach($students as $student)
                   <tr >
-                      <td>{$student->id}}</td>
-                      <td>{$student->studentName}}</td>
+                      <td>{{$student->id}}</td>
+                      <td>{{$student->student_name}}</td>
                       <td>{{$student->email}}</td>
                       <td>{{$student->created_at}}</td>
                       <td> 

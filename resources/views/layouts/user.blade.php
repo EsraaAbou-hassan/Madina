@@ -121,15 +121,16 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  @yield('content')
-
-  
   @if(session()->has('success'))
         <div class="alert alert-success">
             {{session()->get('success')}}
         </div>
        @endif
+
+  @yield('content')
+
+  
+ 
  
   <div class="card-body text-secondary" >
     <div class=" card">
