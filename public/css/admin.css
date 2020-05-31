@@ -1,0 +1,16 @@
+.my-card .card-body{
+	padding: 0;
+}
+
+.my-card .card-text {
+	padding: 17px;
+}
+
+.my-card .card-title {
+	float: right;
+}
+
+.details-page {
+	direction: rtl;
+	text-align: right;
+}

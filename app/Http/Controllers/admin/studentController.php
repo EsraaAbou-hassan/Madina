@@ -45,10 +45,11 @@ class studentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($students)
+    public function show($id)
     {
-        $students =student::all() ;
-        return view('admin.students.morInformation')->with('students',$students);
+        $student = Student::find($id);
+
+        return view('admin.students.morInformation', compact('student'));
     }
 
     /**

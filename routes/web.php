@@ -68,5 +68,5 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,func
     Route::get('/', 'adminController@index');
     Route::resource('/users', 'userController');
     Route::resource('/students', 'studentController');
-    });
+});
 

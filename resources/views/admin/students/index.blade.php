@@ -51,8 +51,8 @@
                       <td>{{$student->email}}</td>
                       <td>{{$student->created_at}}</td>
                       <td> 
-                        <a  href="/admin/students/morInformation" class="btn btn-info btn-sm"> 
-                        <i class="fa fa-edit "></i></a>
+                        <a  href="/admin/students/{{ $student->id }}" class="btn btn-info btn-sm"> 
+                        <i class="fa fa-eye "></i></a>
                       </td>
                      
                     </tr>

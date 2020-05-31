@@ -122,8 +122,10 @@
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
   @if(session()->has('success'))
-        <div class="alert alert-success">
-            {{session()->get('success')}}
+        <div class="container">
+          <div class="alert alert-success">
+              {{session()->get('success')}}
+          </div>
         </div>
        @endif
 
