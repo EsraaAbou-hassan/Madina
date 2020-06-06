@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Users Managment</h1>
+            <h1 class="m-0 text-dark">إدارة المستخدم</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-              <li class="breadcrumb-item active">Users</li>
+              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
+              <li class="breadcrumb-item active">المستخدم</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -33,9 +33,9 @@
                     {{ session('status') }}
                 </div>
             @endif
-        <div class="card ">
-              <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+        <div class="card  ">
+              <div class="card-header bg-dark">
+                <h3 class="card-title">قائمة إضافة المسئولين</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -43,24 +43,24 @@
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">الإسم</label>
                     <input type="name" class="form-control @error('name') is-invalid @enderror" id="name" 
-                     name="name" placeholder="Enter Your Name ">
+                     name="name" placeholder="ادخل الإسم رباعي بالعربية ">
                     
                     @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"  name="email" placeholder="Enter email">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" id="email"  name="email" placeholder="ادخل البريد افلكتروني">
                     @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control @error('Password') is-invalid @enderror" id="password" name="password" placeholder="Password">
+                    <label for="password">الرقم السري</label>
+                    <input type="password" class="form-control @error('Password') is-invalid @enderror" id="password" name="password" placeholder="ادخل الرقم السري">
                     @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -70,7 +70,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">إرسال البيانات</button>
                 </div>
               </form>
             </div>

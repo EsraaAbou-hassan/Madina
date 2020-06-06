@@ -10,12 +10,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Users Managment</h1>
+          <h1 class="m-0 text-dark">إدارة المستخدم</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-              <li class="breadcrumb-item active"> Edit User< /li>
+              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
+              <li class="breadcrumb-item active">المستخدم</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -34,36 +34,36 @@
                 </div>
             @endif
         <div class="card ">
-              <div class="card-header">
-                <h3 class="card-title">Edit User</h3>
+              <div class="card-header bg-dark">
+                <h3 class="card-title">تعديل بيانات المستخدم</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
               <form method="post" action="/admin/users/{{$user->id}}">
-              @method('PUT');
+              @method('PUT')
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name">الإسم</label>
                     <input type="name" class="form-control @error('name') is-invalid @enderror" id="name" 
-                     name="name" placeholder="Enter Your Name " value="{{$user->name}}">
+                     name="name" placeholder="دخل  الإسم رباعي " value="{{$user->name}}">
                     
                     @error('name')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email">البريد الإلكتروني</label>
                     <input type="email" class="form-control @error('email') is-invalid @enderror"
-                     id="email"  name="email" placeholder="Enter email" value="{{$user->email}}">
+                     id="email"  name="email" placeholder="ادخل البريد الإلكتروني" value="{{$user->email}}">
                     @error('email')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="password">Password</label>
+                    <label for="password">الرقم السري</label>
                     <input type="password" class="form-control @error('Password') is-invalid @enderror"
-                     id="password" name="password" placeholder="Password" value="{{$user->password}}">
+                     id="password" name="password" placeholder="ادخل الرقم السري" value="{{$user->password}}">
                     @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -73,7 +73,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">إرسال</button>
                 </div>
               </form>
             </div>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\MessageBag;
 class requestController extends Controller
 {
@@ -40,7 +41,7 @@ class requestController extends Controller
             'nationality' => ['required'],
             'Kind_of_student' => ['required'],
             'student_name' => ['required'],
-            'student_ssn' => ['required', 'numeric'],
+            'student_ssn' => ['required'],
             'code' => ['required'],
             'birthday' => ['required'],
             'residance' =>['required'],
@@ -91,8 +92,8 @@ class requestController extends Controller
              'student_mobile' =>$request['student_mobile'],
              'student_year' =>$request['student_year'],
              'collage' =>$request['collage'],
-             'student_id' => $request['student_id'],
-             'peciture' => $request['peciture'],
+             'student_id' => $request['student_id']->store('images','public'),
+             'peciture' => $request['peciture']->store('images','public'),
              'password' =>$request['password'],
              'sure_password' =>$request['sure_password'],
              'father_name' =>$request['father_name'],
@@ -100,7 +101,7 @@ class requestController extends Controller
              'father_ssn' =>$request['father_ssn'], 
              'father_job' =>$request['father_job'], 
              'father_mobile' =>$request['father_mobile'],
-             'father_id' => $request['father_id'],
+             'father_id' => $request['father_id']->store('images','public'),
              'type_of_stay' =>$request['type_of_stay'],
              'grade' =>$request['grade'],
              'taqdir' =>$request['taqdir'],
@@ -109,7 +110,7 @@ class requestController extends Controller
             'damin_ssn' =>$request['damin_ssn'],
             'damin_mobile'=>$request['damin_mobile'],
             'damin_job' =>$request['damin_job'],
-            'damin_id' =>$request['damin_id'],
+            'damin_id' =>$request['damin_id']->store('images','public'),
             'income' =>$request['income'],
             'number' =>$request['number'], 
             'build' =>$request['build'],

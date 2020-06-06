@@ -42,7 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control form-control-navbar" type="search" placeholder="بحث" aria-label="Search">
         <div class="input-group-append">
           <button class="btn btn-navbar" type="submit">
             <i class="fas fa-search"></i>
@@ -62,7 +62,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <a href="index3.html" class="brand-link">
       <img src="{{asset('img/logo.png')}}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">CMS</span>
+      <span class="brand-text font-weight-light">المدينة</span>
     </a>
 
     <!-- Sidebar -->
@@ -76,7 +76,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="/admin" class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt  "></i>
               <p>
-                Dashboard
+               الرئيسية
                 
               </p>
             </a>
@@ -85,7 +85,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="/admin/users" class="nav-link">
               <i class="nav-icon fas fa-users  "></i>
               <p>
-              Users
+              المستخدم
                 
               </p>
             </a>
@@ -94,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="/admin/students" class="nav-link">
             <i class="fas fa-user-friends"></i>
               <p>
-              Students
+              الطلاب
               </p>
             </a>
           </li>
@@ -104,7 +104,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                      document.getElementById('logout-form').submit();">
               <i class="nav-icon fas fa-power-off"></i>
               <p>
-               Logout
+               تسجيل الخروج
                 
               </p>
             </a>

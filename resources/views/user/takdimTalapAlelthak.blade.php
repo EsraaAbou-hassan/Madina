@@ -22,7 +22,7 @@
                         </div>
                 @endif
 
-            <form action="/takdimTalapAlelthak" method="post">
+            <form action="/takdimTalapAlelthak" method="post"  enctype="multipart/form-data">
             @csrf
                <div class="container">
                     <div class="row">
@@ -88,18 +88,18 @@
                       </div>
                     <div class="form-group col-3">
                         <select name="residance" class="form-control" required>
-                        <option value="bahary" 
-                        @if(old("residance") == "bahary")
+                        <option value="بحري" 
+                        @if(old("residance") == "بحري")
                           {{ "selected" }}
                         @endif
                         >وجه بحري</option>
-                        <option value="kibly"
-                        @if(old("residance") == "kibly")
+                        <option value="قبلي"
+                        @if(old("residance") == "قبلي")
                           {{ "selected" }}
                         @endif
                         >وجه قبلي</option>
-                        <option value="saina"
-                        @if(old("residance") == "saina")
+                        <option value="سيناء"
+                        @if(old("residance") == "سيناء")
                           {{ "selected" }}
                         @endif
                         >سيناء</option>
@@ -245,16 +245,16 @@
                    </div>
               <div class="row">
                   <div class="form-group col-3">
-                          <input  type="radio" name="type_of_stay" value="normal" checked> ساكن عادي<br>
+                          <input  type="radio" name="type_of_stay" value="ساكن عادي" checked> ساكن عادي<br>
             
                         </div>
                              <div class=" form-group col-3">
-                          <input type="radio" name="type_of_stay" value="kawareth" > كوارث<br>
+                          <input type="radio" name="type_of_stay" value="كوارث" > كوارث<br>
                   
                         </div>
                         
                           <div class="form-group col-4">
-                          <input  type="radio" name="type_of_stay" value="special" > ذوي الإحتياجات الخاصة<br>
+                          <input  type="radio" name="type_of_stay" value="حالة خاصة" > ذوي الإحتياجات الخاصة<br>
                      </div>
               </div>
                </div>
@@ -269,13 +269,13 @@
                               </div>
                               <div class=" form-group col-3">
                                         <select name="grade"class="form-control" >
-                                          <option value=""></option>
-                                          <option value="grade1">الفرقه الأولى بعد إعدادي</option>
-                                          <option value="grade2">الفرقه الثانيه</option>
-                                          <option value="grade3">الفرقه الثالثه</option>
-                                          <option value="grade4">الفرقه الرابعه</option>
-                                          <option value="grade5">الفرقه الخامسه </option>
-                                          <option value="grade6">الفرقه السادسه</option>
+                                          
+                                          <option value="الفرقة الولى">الفرقه الأولى بعد إعدادي</option>
+                                          <option value="الفرقةالثانية">الفرقه الثانيه</option>
+                                          <option value="الفرقة الثالثة">الفرقه الثالثه</option>
+                                          <option value="الفرقة الرابعه">الفرقه الرابعه</option>
+                                          <option value="الفرقة الخامسة">الفرقه الخامسه </option>
+                                          <option value="الفرقة السادسة">الفرقه السادسه</option>
                                       
                                     </select>
                               </div>
@@ -286,10 +286,10 @@
                                 </div>
                                 <div class="form-group col-3">
                                     <select  name="taqdir" class="form-control" >
-                                        <option value=""></option>
-                                        <option  value="excellant">امتياز</option>
-                                        <option  value="veryGood">جيد جدا</option>
-                                        <option  value="good">جيد</option>
+                                        
+                                        <option  value="امتياز">امتياز</option>
+                                        <option  value="جيدجدا">جيد جدا</option>
+                                        <option  value="جيد">جيد</option>
                                     
                                     </select>
                                 </div>
@@ -316,9 +316,9 @@
                               </div>
                               <div class="form-group col-3">
                                       <select name="department" class="test form-control">
-                                          <option value=""></option>
-                                          <option value="Adaby">ادبي</option>
-                                          <option value="elmy">علمي</option>
+                                          
+                                          <option value="ادبي">ادبي</option>
+                                          <option value="علمي">علمي</option>
                                       </select>
                               </div>
                           </div>
@@ -337,9 +337,9 @@
                               </div>
                               <div class=" form-group col-3">
                                         <select name="grade"class="form-control" >
-                                          <option value=""></option>
-                                          <option value="primary">الفرقه الإعداديه</option>
-                                          <option value="first">الفرقه الأولي</option>
+                                         
+                                          <option value="الفرقة افعدادية">الفرقه الإعداديه</option>
+                                          <option value="الفرقة الولى">الفرقه الأولي</option>
                                           
                                       
                                     </select>
@@ -406,33 +406,6 @@
              </div>
          <div class="card-body text-secondary" >
               <div class="container">
-                    <!-- <div class="row">
-                          <div class="form-group col-3">
-                             <label > اسم ولي الأمر <bdi>:</bdi> </label>
-                          </div>
-                          <div class="form-group col-3">
-                             <input type="text" class="form-control" name="father_name" value="{{old('father_name')}}" required placeholder="الإسم رباعي باللغة العربية">
-                          </div>
-                    </div>
-                   -->
-                   <!-- <div class="row">
-                      <div class="form-group col-3">
-                          <label> الرقم القومى<bdi>:</bdi> </label>
-                      </div>
-                      <div class="form-group col-3">
-                           <input type="text" name="father_snn" value="{{old('father_snn')}}" required class="form-control">
-                      </div>
-                   </div>
-                  -->
-                  
-                   <!-- <div class="row">
-                       <div class="form-group col-3">
-                         <label> الوظيفه <bdi>:</bdi> </label>
-                       </div>
-                       <div class=" form-group col-3">
-                          <input type="text"  name="father_job" value="{{old('father_job')}}" required class="form-control" >
-                       </div>
-                   </div> -->
                    
                    <div class="row">
                       <div class=" form-group col-3">
@@ -506,7 +479,7 @@
                                 </ul>
                         <div class="row">
                             <div class=" form-group col-12">
-                                <input type="radio" name="ekrar" value="on" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
+                                <input type="radio" name="ekrar" value="نعم" required> أقر بأن البيانات(محل الإقامه-التقدير-الفرقه/الكليه)صحيحه طبقا للأوراق الرسميه على أن أقدم هذه الأوراق اذا ثبت أى خطأ في البيانات يتم تحويلي للشئون القانونيه وفصلي
                                           نهائيا من المدينه <br>
                             </div>
                         </div>

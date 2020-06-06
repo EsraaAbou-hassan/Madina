@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Students Managment</h1>
+            <h1 class="m-0 text-dark">إدارة البيانات الخاصة بالطلاب</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
-              <li class="breadcrumb-item active">Students</li>
+              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
+              <li class="breadcrumb-item active">الطلاب</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -28,18 +28,19 @@
         <div class="col-12">
             <div class="card">
               <div class="card-header bg-dark">
-                <h3 class="card-title">students List</h3>
+                <h3 class="card-title">قائمة الطلاب</h3>
         </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
                 <table class="table table-head-fixed text-nowrap">
                   <thead >
                     <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Created At</th>
-                      <th>MoreInformation</th>
+                      <th>Iالمتسلسل</th>
+                      <th>الإسم</th>
+                      <th>الإيميل</th>
+                      <th>الصورة الشخصية</th>
+                      <th>تاريخ الإنشاء</th>
+                      <th>للإطلاع علي معلوات أكثر</th>
                      
                     </tr>
                   </thead>
@@ -49,6 +50,7 @@
                       <td>{{$student->id}}</td>
                       <td>{{$student->student_name}}</td>
                       <td>{{$student->email}}</td>
+                      <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
                       <td>{{$student->created_at}}</td>
                       <td> 
                         <a  href="/admin/students/{{ $student->id }}" class="btn btn-info btn-sm"> 
