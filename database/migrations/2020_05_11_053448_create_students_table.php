@@ -39,10 +39,10 @@ class CreateStudentsTable extends Migration
             $table->string('father_id');
             $table->string('type_of_stay');
             $table->string('grade');
-            $table->string('taqdir');
-            $table->string('rate');
-            // $table->string('department');
-            // $table->string('sum');
+            $table->string('taqdir')->nullable();
+            $table->string('rate')->nullable();
+            $table->string('department')->nullable();
+            $table->string('sum')->nullable();
             $table->string('damin_name');
             $table->string('damin_ssn');
             $table->string('damin_mobile');
@@ -50,10 +50,11 @@ class CreateStudentsTable extends Migration
             $table->string('damin_id');
             $table->string('income');
             $table->string('number');
-            $table->string('build');
-            $table->string('room_id');
-            $table->string('message');
+            $table->string('build')->nullable();
+            $table->string('room_id')->nullable();
+            $table->string('message')->nullable();
             $table->string('ekrar');
+            $table->tinyInteger('is_accepted')->default(0);
             $table->timestamps();
             
         });

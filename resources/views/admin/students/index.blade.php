@@ -31,7 +31,7 @@
                 <h3 class="card-title">قائمة الطلاب</h3>
         </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
+              <div class="card-body table-responsive p-0">
                 <table class="table table-head-fixed text-nowrap">
                   <thead >
                     <tr>
@@ -40,7 +40,7 @@
                       <th>الإيميل</th>
                       <th>الصورة الشخصية</th>
                       <th>تاريخ الإنشاء</th>
-                      <th>للإطلاع علي معلوات أكثر</th>
+                      <!-- <th>للإطلاع علي معلوات أكثر</th> -->
                      
                     </tr>
                   </thead>
@@ -53,8 +53,10 @@
                       <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
                       <td>{{$student->created_at}}</td>
                       <td> 
-                        <a  href="/admin/students/{{ $student->id }}" class="btn btn-info btn-sm"> 
-                        <i class="fa fa-eye "></i></a>
+                        <a  href="/admin/students/{{ $student->id }}"  id="show" class="btn btn-info btn-sm"> 
+                      عرض</a>
+                      <a class="btn btn-warning btn-sm" id="acc"> مقبول</a>
+                      <a   class="btn btn-danger btn-sm" id="rej"> مرفوض</a>
                       </td>
                      
                     </tr>

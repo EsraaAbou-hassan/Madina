@@ -69,12 +69,13 @@ body {
           }
           
           form.example button {
+           margin-top: -2px;
            float: left;
             width: 20%;
             padding: 10px;
             background: #ecb50d;
             color: white;
-            font-size: 17px;
+            font-size: 16px;
             border: 1px solid grey;
             border-left: none;
             cursor: pointer;

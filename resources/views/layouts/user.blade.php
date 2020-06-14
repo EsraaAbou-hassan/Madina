@@ -30,15 +30,10 @@
                <p class="o">بالقاهرة</p>
            </div>
            
-          <form class="example" action="action_page.php">
-              
-              
-                <button   class=" btn btn-warning" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+             <form class="example" action="/action_page.php">
+                 <button   class=" btn btn-warning" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                   <input type="text" placeholder="  بحث..." name="search" >
-            
-             
-              
-         </form>
+            </form>
           
          <form  action="/action_page.php">
             
@@ -159,9 +154,11 @@
              
            
     </div>
+    
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<script src="{{asset('js/student.js')}}"></script>
     </body>

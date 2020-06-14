@@ -32,21 +32,37 @@
 	direction: rtl;
 	text-align: right;
 }.btn-sm{
-	width: 100px;
+	
 	margin-right: 20px;
-}i{
+}
+i{
 	margin: 2px;
 }
 img{
 	width: 80px;
 	height: 80px;
-}.card-title {
+}
+.card-title {
 	float: right;
 	font-size: 20px;
 	margin-right: 400px;
 }.card-tools{
 	margin: 20px;
    margin-right: 400px;
-}h1{
-	margin-right: 400px;
 }
+h1{
+	margin-right: 400px;
+}.check
+{
+	font-size: 150%;
+	color: red;
+	margin-right:10px;
+}
+input[type=checkbox]
+{
+  
+  transform: scale(1.5);
+  padding: 10px;
+   
+}
+  

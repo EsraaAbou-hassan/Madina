@@ -4,7 +4,7 @@
 <div class="tolap">
              
                    
-            <!-- end card one -->
+            
             <!-- start card two -->
         <div class="card2 border-secondary mb-3">
            
@@ -27,7 +27,7 @@
                <div class="container">
                     <div class="row">
                         <div class="form-group col-3">
-                          <input type="radio" name="nationality" value="مصري" checked> مصري<br>
+                          <input type="radio" name="nationality" value="مصري" > مصري<br>
                         </div>
                         
                         <div class="form-group col-3">
@@ -37,11 +37,11 @@
                     
                     <div class="row">
                         <div class=" form-group col-3">
-                          <input   type="radio" name="Kind_of_student" value="قديم" checked> طلاب قدامي<br>
+                          <input   type="radio"  value="قديم"   id="old" name="Kind_of_student"> طلاب قدامي<br>
                         </div>
                         
                         <div class="form-group col-4">
-                          <input  type="radio" name="Kind_of_student"value="حديث" >طلاب مستجدين<br>
+                          <input  type="radio"  value="حديث"    id="new" name="Kind_of_student">طلاب مستجدين<br>
                         </div>
                     </div>
                     <div class="row">
@@ -89,6 +89,7 @@
                     <div class="form-group col-3">
                         <select name="residance" class="form-control" required>
                         <option value="بحري" 
+                        
                         @if(old("residance") == "بحري")
                           {{ "selected" }}
                         @endif
@@ -245,7 +246,7 @@
                    </div>
               <div class="row">
                   <div class="form-group col-3">
-                          <input  type="radio" name="type_of_stay" value="ساكن عادي" checked> ساكن عادي<br>
+                          <input  type="radio" name="type_of_stay" value="ساكن عادي" > ساكن عادي<br>
             
                         </div>
                              <div class=" form-group col-3">
@@ -259,96 +260,102 @@
               </div>
                </div>
                  
-                  <div class="card-header">
-                           <p>خاص بالطلاب قدامى </p>
-                  </div>
-                 <div class="card-body text-secondary">
-                        <div class="row">
-                              <div class=" form-group col-3">
-                                  <label> الفرقه <bdi>:</bdi> </label>
-                              </div>
-                              <div class=" form-group col-3">
-                                        <select name="grade"class="form-control" >
-                                          
-                                          <option value="الفرقة الولى">الفرقه الأولى بعد إعدادي</option>
-                                          <option value="الفرقةالثانية">الفرقه الثانيه</option>
-                                          <option value="الفرقة الثالثة">الفرقه الثالثه</option>
-                                          <option value="الفرقة الرابعه">الفرقه الرابعه</option>
-                                          <option value="الفرقة الخامسة">الفرقه الخامسه </option>
-                                          <option value="الفرقة السادسة">الفرقه السادسه</option>
-                                      
-                                    </select>
-                              </div>
-                        </div>
-                        <div class="row">
-                                <div class="form-group col-3">
-                                    <label> تقدير العام الماضى<bdi>:</bdi> </label>
-                                </div>
-                                <div class="form-group col-3">
-                                    <select  name="taqdir" class="form-control" >
-                                        
-                                        <option  value="امتياز">امتياز</option>
-                                        <option  value="جيدجدا">جيد جدا</option>
-                                        <option  value="جيد">جيد</option>
-                                    
-                                    </select>
-                                </div>
-                        </div>
-                        <div class="row">
-                            <div class=" form-group col-3">
-                              <label> نسبة  التقدير<bdi>:</bdi> </label>
-                            </div>
-                            <div class=" form-group col-3">
-                                <input type="text"  name="rate" value="{{old('rate')}}" required class="form-control">
-                            </div>
-                            
-                        
-                        </div>
-                  </div>
-           
-                  <!-- <div class="card-header">
-                       <p>خاص بالطلاب المستجدين </p>
-                  </div>
-                  <div class="card-body text-secondary" >
+              
+                   <div class="old_student">
+                    <div class="card-header" >
+                            <p>خاص بالطلاب قدامى </p>
+                    </div>
+                    <div class="card-body text-secondary">
                           <div class="row">
-                              <div class="form-group col-3">
-                                <label>شعبه الثانويه الازهريه<bdi>:</bdi> </label>
-                              </div>
-                              <div class="form-group col-3">
-                                      <select name="department" class="test form-control">
-                                          
-                                          <option value="ادبي">ادبي</option>
-                                          <option value="علمي">علمي</option>
+                                <div class=" form-group col-3">
+                                    <label> الفرقه <bdi>:</bdi> </label>
+                                </div>
+                                <div class=" form-group col-3">
+                                          <select name="grade"class="form-control" >
+                                            
+                                            <option value="الفرقة الأولى">الفرقه الأولى بعد إعدادي</option>
+                                            <option value="الفرقةالثانية">الفرقه الثانيه</option>
+                                            <option value="الفرقة الثالثة">الفرقه الثالثه</option>
+                                            <option value="الفرقة الرابعه">الفرقه الرابعه</option>
+                                            <option value="الفرقة الخامسة">الفرقه الخامسه </option>
+                                            <option value="الفرقة السادسة">الفرقه السادسه</option>
+                                        
                                       </select>
-                              </div>
+                                </div>
                           </div>
                           <div class="row">
-                              <div class="form-group col-3">
-                                <label> مجموع الثانويه الازهريه<bdi>:</bdi> </label>
+                                  <div class="form-group col-3">
+                                      <label> تقدير العام الماضى<bdi>:</bdi> </label>
+                                  </div>
+                                  <div class="form-group col-3">
+                                      <select  name="taqdir" class="form-control" >
+                                          
+                                          <option  value="امتياز">امتياز</option>
+                                          <option  value="جيدجدا">جيد جدا</option>
+                                          <option  value="جيد">جيد</option>
+                                      
+                                      </select>
+                                  </div>
+                          </div>
+                          <div class="row">
+                              <div class=" form-group col-3">
+                                <label> نسبة  التقدير<bdi>:</bdi> </label>
                               </div>
                               <div class=" form-group col-3">
-                                  <input type="text" name="sum" value="{{old('sum')}}" required class="form-control" >
+                                  <input type="text"  name="rate" value="{{old('rate')}}"  class="form-control">
                               </div>
                               
+                          
                           </div>
-                          <div class="row">
-                              <div class=" form-group col-3">
-                                  <label> الفرقه <bdi>:</bdi> </label>
-                              </div>
-                              <div class=" form-group col-3">
-                                        <select name="grade"class="form-control" >
-                                         
-                                          <option value="الفرقة افعدادية">الفرقه الإعداديه</option>
-                                          <option value="الفرقة الولى">الفرقه الأولي</option>
+                    </div>
+                  
+                   </div>
+                 <div class="new_student">
+                    <div class="card-header " >
+                        <p>خاص بالطلاب المستجدين </p>
+                    </div>
+                    <div class="card-body text-secondary" >
+                            <div class="row">
+                                <div class="form-group col-3">
+                                  <label>شعبه الثانويه الازهريه<bdi>:</bdi> </label>
+                                </div>
+                                <div class="form-group col-3">
+                                        <select name="department" class="test form-control">
+                                            
+                                            <option value="ادبي">ادبي</option>
+                                            <option value="علمي">علمي</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-3">
+                                  <label> مجموع الثانويه الازهريه<bdi>:</bdi> </label>
+                                </div>
+                                <div class=" form-group col-3">
+                                    <input type="text" name="sum" value="{{old('sum')}}"  class="form-control" >
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                <div class=" form-group col-3">
+                                    <label> الفرقه <bdi>:</bdi> </label>
+                                </div>
+                                <div class=" form-group col-3">
+                                          <select name="grade"class="form-control" >
                                           
-                                      
-                                    </select>
-                              </div>
-                        </div>
-                      
-         
-               </div> -->
-           <!-- end card one -->
+                                            <option value="الفرقة الإعدادية">الفرقه الإعداديه</option>
+                                            <option value="الفرقة الأولى">الفرقه الأولي</option>
+                                            
+                                        
+                                      </select>
+                                </div>
+                          </div>
+                        
+          
+                    </div>
+                </div>  
+          
+                
              <!-- start card two -->
                  <div class="card-header">
                     <p>الجزء الخاص بالضامن</p>
@@ -401,9 +408,9 @@
        
            <!-- end card two -->
            <!-- start card three -->
-    <div class="card-header">
-            <p>الجزء الخاص بالحاله الإجتماعيه</p>
-             </div>
+           <div class="card-header">
+               <p>الجزء الخاص بالحاله الإجتماعيه</p>
+            </div>
          <div class="card-body text-secondary" >
               <div class="container">
                    
@@ -425,38 +432,43 @@
                       </div>
                   
                     </div>
-                 </div>
+              </div>
             
-            </div>
+          </div>
                    <!-- end card three -->
                     <!-- start card four -->
+          <div class="old_student">
              <div class="card-header">
                 <p> الإقامه السابقه للطلاب القدامي</p>
              </div>
-         <div class="card-body text-secondary" >
-              <div class="container">
-                    <div class="row">
-                          <div class=" form-group col-3">
-                               <label > اسم المبنى <bdi>:</bdi> </label>
+            <div class="card-body text-secondary" >
+                  <div class="container">
+                        <div class="row">
+                              <div class=" form-group col-3">
+                                  <label > اسم المبنى <bdi>:</bdi> </label>
+                              </div>
+                              <div class=" form-group col-3">
+                                  <input type="text" class="form-control"   name="build" value="{{old('build')}}"  >
+                              </div>
+                        </div>
+                      
+                        <div class="row">
+                              <div class=" form-group col-3">
+                                <label>رقم الغرفه<bdi>:</bdi> </label>
+                              </div>
+                              <div class="col-3">
+                                <input type="text" class="form-control" name="room_id" value="{{old('room_id')}}"  >
+                              </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-12">
+                              <textarea class="form-control" name="message"  placeholder="مخالفات قانونيه">{{old('message')}}</textarea>
                           </div>
-                          <div class=" form-group col-3">
-                               <input type="text" class="form-control"   name="build" value="{{old('build')}}" required >
-                          </div>
-                    </div>
-                  
-                    <div class="row">
-                          <div class=" form-group col-3">
-                            <label>رقم الغرفه<bdi>:</bdi> </label>
-                          </div>
-                          <div class="col-3">
-                            <input type="text" class="form-control" name="room_id" value="{{old('room_id')}}" required >
-                          </div>
-                    </div>
-                    <div class="row">
-                       <div class="form-group col-12">
-                           <textarea class="form-control" name="message" required placeholder="مخالفات قانونيه">{{old('message')}}</textarea>
-                       </div>
-                   </div>
+                      </div>
+                  </div>
+            </div>   
+          </div> 
+                 <div>
                    <div class="card1  mb-3">
                         <p>ملاحظات هامه</p>
                                  <ul>
@@ -495,6 +507,7 @@
            
                
          </div>
-         
-        </div>
-@endsection
+</div></div>
+        
+
+         @endsection

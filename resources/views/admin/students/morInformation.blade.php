@@ -144,7 +144,7 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row o" id="o">
                     <div class="col-12">
                         <div class="card my-card">
                           <div class="card-body">
@@ -170,7 +170,10 @@
                           </div>
                         </div>
                     </div>
-                     <div class="col-12">
+                    
+                </div>
+                <div class="row">
+                    <div class="col-12">
                         <div class="card my-card">
                           <div class="card-body">
                              <div class="card-header bg-dark">
@@ -204,7 +207,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12">
                         <div class="card my-card">
@@ -228,13 +230,16 @@
                           </div>
                         </div>
                     </div>
-                     <div class="col-12">
+                </div>    
+                <div class="row o" id="ol">
+                   <div class="col-12">
                         <div class="card my-card">
                           <div class="card-body">
                              <div class="card-header bg-dark">
                                     <h3 class="card-title">الإقامة السابقة للطالب</h3>
                             </div>
                             <div class="card-text">
+                              <ul class="list-group list-group-flush">
                                  <li class="list-group-item">
                                      <label > اسم المبنى <bdi>:</bdi> </label>
                                         {{ $student->build }}
@@ -260,13 +265,79 @@
                                     <label> اقرار الطالب<bdi>:</bdi> </label>
                                         {{ $student->ekrar }}
                                     </li>
+                              </ul>    
                             </div>
                           </div>
                         </div>
                     </div>
+                     
                 </div>
+               <div class="row n" id="n">
+                   <div class="col-12">
+                        <div class="card my-card">
+                          <div class="card-body">
+                             <div class="card-header bg-dark">
+                                    <h3 class="card-title">البيانات الخاصة بالمستجدين</h3>
+                             </div>
+                             <div class="card-text">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                    <label>شعبه الثانويه الازهريه<bdi>:</bdi> </label>
+                                        {{ $student->department }}
+                                    </li>
+                                    <li class="list-group-item">
+                                    <label> مجموع الثانويه الازهريه<bdi>:</bdi> </label>
+                                        {{ $student->sum }}
+                                    </li>
+                                    <li class="list-group-item">
+                                    <label> الفرقه <bdi>:</bdi> </label>
+                                        {{ $student->grade}}
+                                    </li>
+                                </ul>      
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                     </div>
+                     
+                
+               </div>
+               <div class="row">
+                   <div class="col-12">
+                        <div class="card my-card">
+                          <div class="card-body">
+                             
+                            <div class="card-text">
+                              <ul class="list-group list-group-flush">
+                                 
+                                <li class="list-group-item">
+                                    <label> اقرار الطالب<bdi>:</bdi> </label>
+                                        {{ $student->ekrar }}
+                                </li>
+                                <li class="list-group-item">
+                                  <div class="row">
 
-            </div>
+                                     <div class="col-6">
+                                        <input type="checkbox"   id="accepted"  value="accepted">
+                                        <label class="check">
+                                           الطلب مقبول
+                                        </label>
+                                     </div>
+                                     <div class="col-6">
+                                        <input type="checkbox"  id="rejected" value="rejected">
+                                        <label class="check">
+                                           الطلب مرفوض
+                                        </label>
+                                     </div>
+                                  </div>
+                                </li>
+                              </ul>    
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                     
+                </div>
         </div>
     </div>
 @endsection
