@@ -52,17 +52,4 @@ img{
 }
 h1{
 	margin-right: 400px;
-}.check
-{
-	font-size: 150%;
-	color: red;
-	margin-right:10px;
 }
-input[type=checkbox]
-{
-  
-  transform: scale(1.5);
-  padding: 10px;
-   
-}
-  

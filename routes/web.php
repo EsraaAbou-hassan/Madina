@@ -61,6 +61,7 @@ Route::get('/tasgilDkholAltalep', function () {
 });
 Route::get('/takdimTalapAlelthak','User\requestController@index');
 Route::post('/takdimTalapAlelthak','User\requestController@store');
+Route::get('/takdimTalapAlelthak','admin\studentController@isAccepted');
 
 
 Auth::routes();

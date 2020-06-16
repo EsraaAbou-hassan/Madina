@@ -53,15 +53,20 @@ class studentController extends Controller
     }
 
     
-    public function  isAccepted($student)
+    public function isAccepted(Request $request, $student)
     {
       if($student->value=="accepted" ){
-        $student->is_accepted=1;
-        $student->save();
-      }elseif($student->value=="rejected"){
-        return "is rejected";
-        $student->is_accepted=2;
+        $student=student::where('is_accepted',$request->is_accepted)
+        ->update(['is_accepted' => 1]);
+         $student->save();
+        return redirect('/takdimTalapAlelthak');
+      } 
+      elseif($student->value=="rejected"){
         
+        $student=student::where('is_accepted',$request->is_accepted)
+        ->update(['is_accepted' => 2]);
+        $student->save();
+       return redirect('/takdimTalapAlelthak');
       }
     }
 }

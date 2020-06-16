@@ -18,14 +18,13 @@ $("input[id$='new']").click(function(){
 
 $("#acc").hide();
 $("#rej").hide();
-$("input[id$='accepted']").click(function(){
-  $("#show").hide();
-  $("#rej").hide();
-  $("#acc").show(); 
+
+$(".accepted").click(function(){
+   $("#show").hide();
+   $("#acc").show(); 
 });
-$("input[id$='rejected']").click(function(){
+$(".rejected").click(function(){
   $("#show").hide();
-  $("#acc").hide();
   $("#rej").show(); 
 });
 

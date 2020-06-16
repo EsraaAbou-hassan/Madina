@@ -318,17 +318,15 @@
                                   <div class="row">
 
                                      <div class="col-6">
-                                        <input type="checkbox"   id="accepted"  value="accepted">
-                                        <label class="check">
-                                           الطلب مقبول
-                                        </label>
-                                     </div>
-                                     <div class="col-6">
-                                        <input type="checkbox"  id="rejected" value="rejected">
-                                        <label class="check">
-                                           الطلب مرفوض
-                                        </label>
-                                     </div>
+                                        <button type="submit" class="btn btn-outline-danger btn-lg accepted">
+                                            <a href="/takdimTalapAlelthak"  id="accepted">الطلب مقبول</a>
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                       <button type="submit" class="btn btn-outline-danger btn-lg rejected">
+                                           <a href="/takdimTalapAlelthak" id="rejected">الطلب مرفوض</a>
+                                       </button>
+                                    </div>
                                   </div>
                                 </li>
                               </ul>    
