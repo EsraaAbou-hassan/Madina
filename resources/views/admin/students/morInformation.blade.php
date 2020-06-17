@@ -319,12 +319,12 @@
 
                                      <div class="col-6">
                                         <button type="submit" class="btn btn-outline-danger btn-lg accepted">
-                                            <a href="/takdimTalapAlelthak"  id="accepted">الطلب مقبول</a>
+                                            <a href="/admin/students/accept/{{ $student->id }}"  id="accepted">قبول الطلب </a>
                                         </button>
                                     </div>
                                     <div class="col-6">
                                        <button type="submit" class="btn btn-outline-danger btn-lg rejected">
-                                           <a href="/takdimTalapAlelthak" id="rejected">الطلب مرفوض</a>
+                                           <a href="/admin/students/reject/{{ $student->id }}" id="rejected"> رفض الطلب</a>
                                        </button>
                                     </div>
                                   </div>
@@ -338,4 +338,5 @@
                 </div>
         </div>
     </div>
+
 @endsection

@@ -59,15 +59,16 @@ Route::get('/shroutAltaqdim', function () {
 Route::get('/tasgilDkholAltalep', function () {
     return view('user.tasgilDkholAltalep');
 });
+
 Route::get('/takdimTalapAlelthak','User\requestController@index');
 Route::post('/takdimTalapAlelthak','User\requestController@store');
-Route::get('/takdimTalapAlelthak','admin\studentController@isAccepted');
-
 
 Auth::routes();
 Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,function(){
     Route::get('/', 'adminController@index');
     Route::resource('/users', 'userController');
     Route::resource('/students', 'studentController');
+    Route::get('/students/accept/{student}', 'studentController@accept');
+    Route::get('/students/reject/{student}', 'studentController@reject');
 });
 

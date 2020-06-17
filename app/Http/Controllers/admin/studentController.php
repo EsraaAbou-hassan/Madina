@@ -69,4 +69,20 @@ class studentController extends Controller
        return redirect('/takdimTalapAlelthak');
       }
     }
+
+    public function accept($id)
+    {
+        $student = student::where('id', $id)
+            ->update(['is_accepted' => 1]);
+         
+        return redirect('admin/students');
+    }
+
+    public function reject($id)
+    {
+        $student = student::where('id', $id)
+            ->update(['is_accepted' => 2]);
+         
+        return redirect('admin/students');
+    }
 }

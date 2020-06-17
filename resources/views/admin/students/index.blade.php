@@ -40,7 +40,8 @@
                       <th>الإيميل</th>
                       <th>الصورة الشخصية</th>
                       <th>تاريخ الإنشاء</th>
-                      <!-- <th>للإطلاع علي معلوات أكثر</th> -->
+                      <th>حالة الطلب</th>
+                      <th>العمليات</th>
                      
                     </tr>
                   </thead>
@@ -52,11 +53,19 @@
                       <td>{{$student->email}}</td>
                       <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
                       <td>{{$student->created_at}}</td>
+                      <td>
+                        @if ($student->is_accepted == 1)
+                          <span>مقبول</span>
+                        @elseif ($student->is_accepted == 2)
+                          <span>مرفوض</span>
+                        @else
+                          <span>جديد</span>
+                        @endif
+                      </td>
                       <td> 
                         <a  href="/admin/students/{{ $student->id }}"  id="show" class="btn btn-info btn-sm"> 
                       عرض</a>
-                      <a class="btn btn-warning btn-sm" id="acc"> مقبول</a>
-                      <a   class="btn btn-danger btn-sm" id="rej"> مرفوض</a>
+                                       
                       </td>
                      
                     </tr>
