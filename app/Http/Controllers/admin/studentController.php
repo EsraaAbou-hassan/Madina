@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\student;
+use Illuminate\Support\Facades\DB;
 class studentController extends Controller
 {
     /**
@@ -15,6 +16,7 @@ class studentController extends Controller
     public function index()
     {
         $students =student::all() ;
+        $student= DB::table('students')->paginate(2);
         return view( 'admin.students.index')->with('students',$students);
     }
 
@@ -48,26 +50,8 @@ class studentController extends Controller
     public function show($id)
     {
         $student = Student::find($id);
-
+       
         return view('admin.students.morInformation', compact('student'));
-    }
-
-    
-    public function isAccepted(Request $request, $student)
-    {
-      if($student->value=="accepted" ){
-        $student=student::where('is_accepted',$request->is_accepted)
-        ->update(['is_accepted' => 1]);
-         $student->save();
-        return redirect('/takdimTalapAlelthak');
-      } 
-      elseif($student->value=="rejected"){
-        
-        $student=student::where('is_accepted',$request->is_accepted)
-        ->update(['is_accepted' => 2]);
-        $student->save();
-       return redirect('/takdimTalapAlelthak');
-      }
     }
 
     public function accept($id)
@@ -85,4 +69,5 @@ class studentController extends Controller
          
         return redirect('admin/students');
     }
+   
 }

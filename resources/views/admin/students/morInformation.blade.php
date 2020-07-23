@@ -143,35 +143,36 @@
                       </div>
                   </div>
                 </div>
-
-                <div class="row o" id="o">
-                    <div class="col-12">
-                        <div class="card my-card">
-                          <div class="card-body">
-                             <div class="card-header bg-dark">
-                                    <h3 class="card-title">بيانات الطلاب القدامى</h3>
+                @if($student->Kind_of_student=="قديم" )
+                        <div class="row" >
+                            <div class="col-12">
+                                <div class="card my-card">
+                                <div class="card-body">
+                                    <div class="card-header bg-dark">
+                                            <h3 class="card-title">بيانات الطلاب القدامى</h3>
+                                    </div>
+                                    <div class="card-text">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item">
+                                                <label> الفرقه <bdi>:</bdi> </label>
+                                                {{ $student->grade }}
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label> تقدير العام الماضي <bdi>:</bdi> </label>
+                                                {{ $student->taqdir }}
+                                            </li>
+                                            <li class="list-group-item">
+                                                <label> نسبة التقدير <bdi>:</bdi> </label>
+                                                {{ $student->rate }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            <div class="card-text">
-                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <label> الفرقه <bdi>:</bdi> </label>
-                                        {{ $student->grade }}
-                                    </li>
-                                    <li class="list-group-item">
-                                        <label> تقدير العام الماضي <bdi>:</bdi> </label>
-                                        {{ $student->taqdir }}
-                                    </li>
-                                    <li class="list-group-item">
-                                        <label> نسبة التقدير <bdi>:</bdi> </label>
-                                        {{ $student->rate }}
-                                    </li>
-                                  </ul>
-                            </div>
-                          </div>
+                            
                         </div>
-                    </div>
-                    
-                </div>
+                @endif
                 <div class="row">
                     <div class="col-12">
                         <div class="card my-card">
@@ -231,77 +232,81 @@
                         </div>
                     </div>
                 </div>    
-                <div class="row o" id="ol">
-                   <div class="col-12">
-                        <div class="card my-card">
-                          <div class="card-body">
-                             <div class="card-header bg-dark">
-                                    <h3 class="card-title">الإقامة السابقة للطالب</h3>
+                @if($student->Kind_of_student=="قديم" )
+                    <div class="row" >
+                        <div class="col-12">
+                                <div class="card my-card">
+                                <div class="card-body">
+                                    <div class="card-header bg-dark">
+                                            <h3 class="card-title">الإقامة السابقة للطالب</h3>
+                                    </div>
+                                    <div class="card-text">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <label > اسم المبنى <bdi>:</bdi> </label>
+                                                {{ $student->build }}
+                                            </li>
+                                            <li class="list-group-item">
+                                            <label>رقم الغرفه<bdi>:</bdi> </label>
+                                                {{ $student->room_id }}
+                                            </li>
+                                            <li class="list-group-item">
+                                            <div class="row">
+                                            <div class="form-group col-3">
+                                            <label> المخالفات القانونية<bdi>:</bdi> </label>
+                                            </div>
+                                            <div class="form-group col-3">
+                                            <input type="radio" name="MOKHALFAT" value="يوجد" checked>يوجد<br>
+                                            </div>
+                                            <div class="form-group col-3">
+                                                <input type="radio" name="MOKHALFAT" value="لايوجد" >لايوجد <br>
+                                            </div>
+                                            </div>
+                                            </li>
+                                            <li class="list-group-item">
+                                            <label> اقرار الطالب<bdi>:</bdi> </label>
+                                                {{ $student->ekrar }}
+                                            </li>
+                                    </ul>    
+                                    </div>
+                                </div>
+                                </div>
                             </div>
-                            <div class="card-text">
-                              <ul class="list-group list-group-flush">
-                                 <li class="list-group-item">
-                                     <label > اسم المبنى <bdi>:</bdi> </label>
-                                        {{ $student->build }}
-                                    </li>
-                                    <li class="list-group-item">
-                                    <label>رقم الغرفه<bdi>:</bdi> </label>
-                                        {{ $student->room_id }}
-                                    </li>
-                                    <li class="list-group-item">
-                                    <div class="row">
-                                    <div class="form-group col-3">
-                                      <label> المخالفات القانونية<bdi>:</bdi> </label>
-                                      </div>
-                                      <div class="form-group col-3">
-                                      <input type="radio" name="MOKHALFAT" value="يوجد" checked>يوجد<br>
-                                      </div>
-                                      <div class="form-group col-3">
-                                        <input type="radio" name="MOKHALFAT" value="لايوجد" >لايوجد <br>
-                                      </div>
-                                     </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                    <label> اقرار الطالب<bdi>:</bdi> </label>
-                                        {{ $student->ekrar }}
-                                    </li>
-                              </ul>    
-                            </div>
-                          </div>
-                        </div>
+                            
                     </div>
-                     
-                </div>
-               <div class="row n" id="n">
-                   <div class="col-12">
-                        <div class="card my-card">
-                          <div class="card-body">
-                             <div class="card-header bg-dark">
-                                    <h3 class="card-title">البيانات الخاصة بالمستجدين</h3>
-                             </div>
-                             <div class="card-text">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                    <label>شعبه الثانويه الازهريه<bdi>:</bdi> </label>
-                                        {{ $student->department }}
-                                    </li>
-                                    <li class="list-group-item">
-                                    <label> مجموع الثانويه الازهريه<bdi>:</bdi> </label>
-                                        {{ $student->sum }}
-                                    </li>
-                                    <li class="list-group-item">
-                                    <label> الفرقه <bdi>:</bdi> </label>
-                                        {{ $student->grade}}
-                                    </li>
-                                </ul>      
-                             </div>
-                          </div>
+                @endif
+                @if($student->Kind_of_student=="حديث")
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card my-card">
+                                    <div class="card-body">
+                                        <div class="card-header bg-dark">
+                                                <h3 class="card-title">البيانات الخاصة بالمستجدين</h3>
+                                        </div>
+                                        <div class="card-text">
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item">
+                                                <label>شعبه الثانويه الازهريه<bdi>:</bdi> </label>
+                                                    {{ $student->department }}
+                                                </li>
+                                                <li class="list-group-item">
+                                                <label> مجموع الثانويه الازهريه<bdi>:</bdi> </label>
+                                                    {{ $student->sum }}
+                                                </li>
+                                                <li class="list-group-item">
+                                                <label> الفرقه <bdi>:</bdi> </label>
+                                                    {{ $student->grade}}
+                                                </li>
+                                            </ul>      
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                                
+                            
                         </div>
-                      </div>
-                     </div>
-                     
-                
-               </div>
+                @endif
                <div class="row">
                    <div class="col-12">
                         <div class="card my-card">
@@ -318,14 +323,16 @@
                                   <div class="row">
 
                                      <div class="col-6">
-                                        <button type="submit" class="btn btn-outline-danger btn-lg accepted">
-                                            <a href="/admin/students/accept/{{ $student->id }}"  id="accepted">قبول الطلب </a>
-                                        </button>
+                                           <a href="/admin/students/accept/{{ $student->id }}" class="btn btn-outline-danger btn-lg accepted" >
+                                               قبول الطلب
+                                            </a>
+                                        
                                     </div>
                                     <div class="col-6">
-                                       <button type="submit" class="btn btn-outline-danger btn-lg rejected">
-                                           <a href="/admin/students/reject/{{ $student->id }}" id="rejected"> رفض الطلب</a>
-                                       </button>
+                                           <a href="/admin/students/reject/{{ $student->id }}" class="btn btn-outline-danger btn-lg" > 
+                                            رفض الطلب
+                                           </a>
+                                      
                                     </div>
                                   </div>
                                 </li>

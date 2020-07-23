@@ -129,11 +129,13 @@
   
  
  
-  <div class="card-body text-secondary" >
-    <div class=" card">
+  
+ 
+  <div class="card footer">
+    <div class="card-body text-secondary">
         <div class="container">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-4">
                               <h4 dir="rtl" >الإتصال بنا:- </h4>
                               <p>الرقم البريدي :-657655</p>
                               <p>العنوان :- مدينه نصر الحي السادس</p>
@@ -154,6 +156,9 @@
              
            
     </div>
+    
+           
+    
     
     <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- Bootstrap 4 -->

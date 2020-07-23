@@ -773,3 +773,26 @@ font-weight: bold;
         font-weight: bold;
     }
 /*end shakawy*/
+/* start footer */
+.footer{
+    background-color:#4d2314;
+    /* background-color:#927110d4; */
+   
+}
+.fa-facebook-square {
+    color:#3549af;
+    background-color:#d0d8e0!important;
+}.fa-youtube-square {
+   color:#e61717;
+   background-color:#d0d8e0!important;
+}.fa-twitter-square{
+   color:#1692f5;
+   background-color:#d0d8e0!important;
+}.fa-whatsapp-square{
+   color:green;
+   background-color:#d0d8e0!important;
+}.text-secondary {
+    color: #d0d8e0!important;
+}
+   
+/* end footer */

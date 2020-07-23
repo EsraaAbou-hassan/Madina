@@ -47,28 +47,28 @@
                   </thead>
                   <tbody>
                   @foreach($students as $student)
-                  <tr >
-                      <td>{{$student->id}}</td>
-                      <td>{{$student->student_name}}</td>
-                      <td>{{$student->email}}</td>
-                      <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
-                      <td>{{$student->created_at}}</td>
-                      <td>
-                        @if ($student->is_accepted == 1)
-                          <span>مقبول</span>
-                        @elseif ($student->is_accepted == 2)
-                          <span>مرفوض</span>
-                        @else
-                          <span>جديد</span>
-                        @endif
-                      </td>
-                      <td> 
-                        <a  href="/admin/students/{{ $student->id }}"  id="show" class="btn btn-info btn-sm"> 
-                      عرض</a>
-                                       
-                      </td>
-                     
-                    </tr>
+                      <tr >
+                            <td>{{$student->id}}</td>
+                            <td>{{$student->student_name}}</td>
+                            <td>{{$student->email}}</td>
+                            <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
+                            <td>{{$student->created_at}}</td>
+                            <td >
+                              @if ($student->is_accepted == 1)
+                                <span class="accept">مقبول</span>
+                              @elseif ($student->is_accepted == 2)
+                                <span class="reject">مرفوض</span>
+                              @else
+                                <span class="new">جديد</span>
+                              @endif
+                            </td>
+                            <td> 
+                              <a  href="/admin/students/{{ $student->id }}"  id="show" class="btn btn-info btn-sm"> 
+                            عرض</a>
+                                            
+                            </td>
+                        
+                      </tr>
                    
                     @endforeach
                   </tbody>
