@@ -131,12 +131,12 @@
  
   
  
-  <div class="card footer">
-    <div class="card-body text-secondary">
-        <div class="container">
+  <div class="card footer ">
+    <div class="card-body ">
+        
                     <div class="row">
                         <div class="col-4">
-                              <h4 dir="rtl" >الإتصال بنا:- </h4>
+                              <h4 >الإتصال بنا:- </h4>
                               <p>الرقم البريدي :-657655</p>
                               <p>العنوان :- مدينه نصر الحي السادس</p>
                               <p>خريطه الوصول للمدينه الجامعيه</p>
@@ -149,7 +149,7 @@
                             <i class="fab fa-whatsapp-square"style="font-size:50px"></i>
                             <i class="fab fa-twitter-square"style="font-size:50px"></i>
                          </div>
-                    </div>
+                    
                 </div>
     </div>
        
@@ -160,10 +160,13 @@
            
     
     
-    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+   
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
+
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
 <script src="{{asset('js/student.js')}}"></script>
+
     </body>

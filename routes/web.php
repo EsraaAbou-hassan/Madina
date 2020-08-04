@@ -22,9 +22,7 @@ Route::get('/almabanyAlsakania', function () {
 Route::get('/dafiAlmasrofat', function () {
     return view('user.dafiAlmasrofat');
 });
-Route::get('/ekhterMakanek', function () {
-    return view('user.ekhterMakanek');
-});
+
 Route::get('/eltmas', function () {
     return view('user.eltmas');
 });
@@ -62,13 +60,20 @@ Route::get('/tasgilDkholAltalep', function () {
 
 Route::get('/takdimTalapAlelthak','User\requestController@index');
 Route::post('/takdimTalapAlelthak','User\requestController@store');
+Route::get('/ekhterMakanek','User\roomController@index');
+Route::post('/ekhterMakanek','User\roomController@store');
 
-Auth::routes();
+
 Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,function(){
-    Route::get('/', 'adminController@index');
+    Route::get('/dashboard','adminController@index');
+    Route::get('/room','reservationController@index');
     Route::resource('/users', 'userController');
     Route::resource('/students', 'studentController');
     Route::get('/students/accept/{student}', 'studentController@accept');
     Route::get('/students/reject/{student}', 'studentController@reject');
+    Route::resource('/building', 'buildingController');
+    Route::resource('/rooms', 'roomNumberController');
+  
+   
 });
-
+Auth::routes();

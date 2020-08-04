@@ -12,7 +12,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin/dashboard">الرئيسية</a></li>
+              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
               <li class="breadcrumb-item active">الطلاب</li>
             </ol>
           </div><!-- /.col -->
@@ -36,41 +36,31 @@
                   <thead >
                     <tr>
                       <th>Iالمتسلسل</th>
+                      <th>اسم المبنى</th>
+                      <th>اسم الدور</th>
                       <th>الإسم</th>
-                      <th>الإيميل</th>
-                      <th>الصورة الشخصية</th>
-                      <th>تاريخ الإنشاء</th>
-                      <th>حالة الطلب</th>
-                      <th>العمليات</th>
+                      <th>الكلية</th>
+                      <th>الفرقة</th>
+                      <th>الهوايات</th>
+                      
+                      
                      
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($students as $student)
+                  @foreach($reserves as $reserve)
                       <tr >
-                            <td>{{$student->id}}</td>
-                            <td>{{$student->student_name}}</td>
-                            <td>{{$student->email}}</td>
-                            <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
-                            <td>{{$student->created_at}}</td>
-                            <td >
-                              @if ($student->is_accepted == 1)
-                                <span class="accept">مقبول</span>
-                              @elseif ($student->is_accepted == 2)
-                                <span class="reject">مرفوض</span>
-                              @else
-                                <span class="new">جديد</span>
-                              @endif
-                            </td>
-                            <td> 
-                              <a  href="/admin/students/{{ $student->id }}"  id="show" class="btn btn-info btn-sm"> 
-                            عرض</a>
-                                            
-                            </td>
-                        
-                      </tr>
+                            <td>{{$reserve->id}}</td>
+                            <td>{{$reserve->building_name}}</td>
+                            <td>{{$reserve->flat}}</td>
+                             <td>{{$reserve->floor}}</td>
+                             <td>{{$reserve->friend_name}}</td>
+                             <td>{{$reserve->friend_collage}}</td>
+                             <td>{{$reserve->friend_grade}}</td>
+                             <td>{{$reserve->hobbies}}</td>
+                        </tr>
                    
-                    @endforeach
+                  @endforeach
                   </tbody>
                 </table>
               </div>

@@ -14,7 +14,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
+              <li class="breadcrumb-item"><a href="/admin/dashboard">الرئيسية</a></li>
               <li class="breadcrumb-item active">المستخدم</li>
             </ol>
           </div><!-- /.col -->

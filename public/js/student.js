@@ -1,6 +1,7 @@
 $(function(){
     $(".old_student").hide();
     $(".new_student").hide();
+   
  
  
     $("input[id$='old']").click(function(){
@@ -13,4 +14,16 @@ $(function(){
         $(".new_student").show();
       
     });
+    
+//     $(this).find("option:selected").each(function(){
+//         var optionValue = $(this).attr("value");
+//         if(optionValue){
+//             $(".floor").not("." + optionValue).hide();
+//             $("." + optionValue).show();
+//         } else{
+//             $(".floor").hide();
+//         }
+    
+// }).change();
+
 });

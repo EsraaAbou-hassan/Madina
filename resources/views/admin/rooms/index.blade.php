@@ -21,14 +21,15 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <div class="content">
+    
+     <!-- start roomNumber -->
+     <div class="content">
       <div class="container-fluid">
         <div class="row">
         <div class="col-12">
             <div class="card">
               <div class="card-header bg-dark">
-                <h3 class="card-title">قائمة المستخدم</h3>
+                <h3 class="card-title">قائمة بعدد الغرف بكل مبنى</h3>
 
                 
               </div>
@@ -38,42 +39,31 @@
                   <thead >
                     <tr>
                      <th>المتسلسل</th>
-                      <th>الإسم</th>
-                      
-                      <th>البريد الإلكتروني</th>
+                      <!-- <th>اسم المبنى</th> -->
+                      <th>رقم الدور</th>
+                      <th>عدد الطلاب بالغرفة</th>
                       <th>تاريخ الإنشاء</th>
-                      <th>(احذف /عدل)بياناتك</th>
+                      
                      
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($users as $user)
+                  @foreach($numbers as $number)
                   <tr >
-                      <td>{{$user->id}}</td>
-                      <td>{{$user->name}}</td>
-                      <td>{{$user->email}}</td>
-                      <td>{{$user->created_at}}</td>
-                      <td> 
-                      <a  href="/admin/users/{{$user->id}}/edit" class="btn btn-info btn-sm"> 
-                      <i class="fa fa-edit "></i>عدل</a>
-                      <a  href="" class="btn btn-danger btn-sm" onclick="event.preventDefault();
-                             return confirm('Are you sure want to delete this user')? $(this).find('.delete-form').submit():'';"> 
-                      <i class="fa fa-trash "></i>حذف
-                      <form class="delete-form" action="/admin/users/{{$user->id}}" method="POST" 
-                         style="display: none;">
-                         @method('Delete')
-                         @csrf
-                        </form>
-                        </a>
-                      </td>
+                      <td>{{$number->id}}</td>
+                      <!-- <td>{{$number->building_name}}</td> -->
+                      <td>{{$number->floor_number}}</td>
+                      <td>{{$number->capacity}}</td>
+                      <td>{{$number->created_at}}</td>
                      
-                    </tr>
+                     
+                  </tr>
                    
                     @endforeach
                   </tbody>
                 </table>
                 <div class="card-tools">
-                    <a href="/admin/users/create" class="btn btn-primary float-rigth">اضف مستخدم جديد</a>
+                    <a href="/admin/rooms/create" class="btn btn-primary float-rigth">أضف غرفة جديدة</a>
                 </div>
               </div>
               
@@ -85,8 +75,7 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
-    <!-- /.content -->
-     
+    <!-- /end roomNumber -->
   </div>
   <!-- /.content-wrapper -->
 

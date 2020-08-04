@@ -528,6 +528,7 @@ body {
     border: 1px solid #ced4da;
     border-radius: 5px ;
     display: block;
+    margin-right: -1px;
     
 }
 
@@ -775,8 +776,11 @@ font-weight: bold;
 /*end shakawy*/
 /* start footer */
 .footer{
-    background-color:#4d2314;
-    /* background-color:#927110d4; */
+    /* background-color:#4d2314; */
+    background-color:#927110d4;
+    color:white;
+    margin-right: -70px;
+    margin-left: -70px;
    
 }
 .fa-facebook-square {

@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-          <h1 class="m-0 text-dark">إدارة المستخدم</h1>
+            <h1 class="m-0 text-dark">إدارة المستخدم</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -33,37 +33,35 @@
                     {{ session('status') }}
                 </div>
             @endif
-        <div class="card ">
+        <div class="card  ">
               <div class="card-header bg-dark">
-                <h3 class="card-title">تعديل بيانات المستخدم</h3>
+                <h3 class="card-title">قائمة إضافة المباني</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="/admin/users/{{$user->id}}">
-              @method('PUT')
+              <form method="post" action="/admin/building">
               @csrf
                 <div class="card-body">
                   <div class="form-group">
-                    <label for="name">الإسم</label>
-                    <input type="name" class="form-control @error('name') is-invalid @enderror" id="name" 
-                     name="name" placeholder="دخل  الإسم رباعي " value="{{$user->name}}">
+                    <label for="building_name">الإسم</label>
+                    <input type="text" class="form-control @error('name') is-invalid @enderror" id="building_name" 
+                     name="building_name" placeholder="ادخل اسم المبنى">
                     
-                    @error('name')
+                    @error('building_name')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror"
-                     id="email"  name="email" placeholder="ادخل البريد الإلكتروني" value="{{$user->email}}">
-                    @error('email')
+                    <label for="number_of_room">عدد الغرف</label>
+                    <input type="text" class="form-control @error('number_of_room') is-invalid @enderror" id="number_of_room"  name="number_of_room" placeholder="ادخل عدد الغرف
+                    ">
+                    @error('number_of_room')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="password">الرقم السري</label>
-                    <input type="password" class="form-control @error('Password') is-invalid @enderror"
-                     id="password" name="password" placeholder="ادخل الرقم السري" value="{{$user->password}}">
+                    <label for="number_of_floor">الدور</label>
+                    <input type="text" class="form-control @error('number_of_floor') is-invalid @enderror" id="number_of_floor" name="number_of_floor" placeholder="ادخل رقم الدور">
                     @error('password')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
@@ -73,7 +71,7 @@
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">إرسال</button>
+                  <button type="submit" class="btn btn-primary">إرسال البيانات</button>
                 </div>
               </form>
             </div>

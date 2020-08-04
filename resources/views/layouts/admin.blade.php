@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
           <li class="nav-item ">
-            <a href="/admin" class="nav-link ">
+            <a href="/admin/dashboard" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt  "></i>
               <p>
                الرئيسية
@@ -95,6 +95,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <i class="fas fa-user-friends"></i>
               <p>
               الطلاب
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="/admin/room" class="nav-link">
+            
+            <i class="fas fa-building"></i>
+              <p>
+                   تسكين الطالب
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="/admin/building" class="nav-link">
+            
+            <i class="fas fa-building"></i>
+              <p>
+                     المباني السكنية
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="/admin/rooms" class="nav-link">
+            
+            <i class="fas fa-building"></i>
+              <p>
+                      الغرف بكل مبني
               </p>
             </a>
           </li>

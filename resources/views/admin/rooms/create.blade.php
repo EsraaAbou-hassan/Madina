@@ -10,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-          <h1 class="m-0 text-dark">إدارة المستخدم</h1>
+            <h1 class="m-0 text-dark">إدارة المستخدم</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -33,47 +33,52 @@
                     {{ session('status') }}
                 </div>
             @endif
-        <div class="card ">
+        <div class="card  ">
               <div class="card-header bg-dark">
-                <h3 class="card-title">تعديل بيانات المستخدم</h3>
+                <h3 class="card-title">قائمة إضافة الغرف</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="/admin/users/{{$user->id}}">
-              @method('PUT')
+              <form method="post" action="/admin/rooms">
               @csrf
                 <div class="card-body">
+                    <!-- <div class="form-group">
+                        <label for="building_name">الإسم</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="building_name" 
+                        name="building_name" placeholder="ادخل اسم المبنى">
+                        
+                        @error('building_name')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                    </div> -->
                   <div class="form-group">
-                    <label for="name">الإسم</label>
-                    <input type="name" class="form-control @error('name') is-invalid @enderror" id="name" 
-                     name="name" placeholder="دخل  الإسم رباعي " value="{{$user->name}}">
-                    
-                    @error('name')
+                    <label for="floor_number">رقم الدور</label>
+                    <input type="text" class="form-control @error('floor_number') is-invalid @enderror" id="floor_number"  name="floor_number" placeholder="ادخل رقم الغرفه">
+                    @error('floor_number')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="email">البريد الإلكتروني</label>
-                    <input type="email" class="form-control @error('email') is-invalid @enderror"
-                     id="email"  name="email" placeholder="ادخل البريد الإلكتروني" value="{{$user->email}}">
-                    @error('email')
+                    <label for="room_number">رقم الغرفة</label>
+                    <input type="room_number" class="form-control @error('room_number') is-invalid @enderror" id="room_number" name="room_number" placeholder="ادخل رقم الغرفة">
+                    @error('room_number')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
-                    <label for="password">الرقم السري</label>
-                    <input type="password" class="form-control @error('Password') is-invalid @enderror"
-                     id="password" name="password" placeholder="ادخل الرقم السري" value="{{$user->password}}">
-                    @error('password')
+                    <label for="capacity">عدد الأفراد في كل غرفه</label>
+                    <input type="capacity" class="form-control @error('capacity') is-invalid @enderror" id="capacity" name="capacity" placeholder="ادخل عدد الأفرادة">
+                    @error('capacity')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
+                  
                   
                 </div>
                 <!-- /.card-body -->
 
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-primary">إرسال</button>
+                  <button type="submit" class="btn btn-primary">إرسال البيانات</button>
                 </div>
               </form>
             </div>
