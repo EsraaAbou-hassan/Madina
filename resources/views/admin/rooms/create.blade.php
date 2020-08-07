@@ -42,7 +42,7 @@
               <form method="post" action="/admin/rooms">
               @csrf
                 <div class="card-body">
-                    <!-- <div class="form-group">
+                    <div class="form-group">
                         <label for="building_name">الإسم</label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" id="building_name" 
                         name="building_name" placeholder="ادخل اسم المبنى">
@@ -50,7 +50,7 @@
                         @error('building_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
                         @enderror
-                    </div> -->
+                    </div>
                   <div class="form-group">
                     <label for="floor_number">رقم الدور</label>
                     <input type="text" class="form-control @error('floor_number') is-invalid @enderror" id="floor_number"  name="floor_number" placeholder="ادخل رقم الغرفه">

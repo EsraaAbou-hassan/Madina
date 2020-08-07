@@ -36,11 +36,8 @@
                                         <option value="مبني أ">مبني أ</option>
                                         <option value="مبني و">مبني و</option>
                                 </select>
-                                
 
-                                
                                 <label> إسم الدور:</label>
-                           
                                 <select name="flat">
                                     <option  value="ground">الدور  الارضي </option>
                                     <option   value="first">الدور  الاول </option>
@@ -50,15 +47,33 @@
                                     <option   value="fifth">الدور الخامس</option>
                                 
                                 </select>
-                                    <label> رقم الغرفه: </label>           
-                                    <select name="floor">        
-                                                    <option value="n1">1 </option>
-                                                    <option value="n2">2</option>
-                                                    <option value="n3">3 </option>
-                                                    <option value="n4">4 </option>
-                                                    <option value="n5">5 </option>
-                                    </select>
-                                 
+                                <label class="room"> رقم الغرفه: </label>           
+                                <select class="ground floor">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                </select>
+                                <select class="first floor">
+                                        <option>111</option>
+                                        <option>112</option>
+                                </select>
+                                <select class="second floor">
+                                        <option>211</option>
+                                        <option>212</option>
+                                </select>
+                                <select class="third floor">
+                                         <option>311</option>
+                                         <option>312</option>
+                                </select>
+                                <select class="fourth floor">
+                                        <option>411</option>
+                                        <option>412</option>
+                                </select>
+                                <select class="fifth floor">
+                                        <option>511</option>
+                                        <option>512</option>
+                                </select>
+    
                                
                             </div>
                 

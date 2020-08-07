@@ -12,7 +12,7 @@
                       <div class="form-group mx-sm-3 mb-2">
                           <input type="password" class="form-control"  placeholder="الرقم القومي">
                     </div>
-                    <button type="submit" class="btn btn-primary mb-2"><i class="fad fa-info-circle"style="max-size:2x"></i>إستعلام</button>
+                    <button type="submit" class="btn btn-primary mb-2"><i class="fas fa-info-circle"style="max-size:2x"></i>إستعلام</button>
                   </form>
                   
                     </div>

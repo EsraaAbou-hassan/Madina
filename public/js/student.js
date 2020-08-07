@@ -1,6 +1,7 @@
 $(function(){
     $(".old_student").hide();
     $(".new_student").hide();
+    $(".room").hide()
    
  
  
@@ -15,15 +16,16 @@ $(function(){
       
     });
     
-//     $(this).find("option:selected").each(function(){
-//         var optionValue = $(this).attr("value");
-//         if(optionValue){
-//             $(".floor").not("." + optionValue).hide();
-//             $("." + optionValue).show();
-//         } else{
-//             $(".floor").hide();
-//         }
+    $(this).find("option:selected").each(function(){
+        var optionValue = $(this).attr("value");
+        if(optionValue){
+            $(".floor").not("." + optionValue).hide();
+            $("." + optionValue).show();
+            $(".room").show();
+        } else{
+            $(".floor").hide();
+        }
     
-// }).change();
+}).change();
 
 });

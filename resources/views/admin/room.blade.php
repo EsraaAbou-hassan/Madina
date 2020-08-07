@@ -12,7 +12,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/admin">الرئيسية</a></li>
+              <li class="breadcrumb-item"><a href="/admin/dashboard">الرئيسية</a></li>
               <li class="breadcrumb-item active">الطلاب</li>
             </ol>
           </div><!-- /.col -->
@@ -38,6 +38,7 @@
                       <th>Iالمتسلسل</th>
                       <th>اسم المبنى</th>
                       <th>اسم الدور</th>
+                      <th>رقم الغرفة</th>
                       <th>الإسم</th>
                       <th>الكلية</th>
                       <th>الفرقة</th>

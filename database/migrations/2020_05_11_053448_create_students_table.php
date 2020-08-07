@@ -51,7 +51,7 @@ class CreateStudentsTable extends Migration
             $table->string('income');
             $table->string('number');
             $table->string('build')->nullable();
-            $table->string('room_id')->nullable();
+            $table->string('room_number')->nullable();
             $table->string('message')->nullable();
             $table->string('ekrar');
             $table->tinyInteger('is_accepted')->default(0);

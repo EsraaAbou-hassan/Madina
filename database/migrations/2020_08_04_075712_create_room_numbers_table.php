@@ -15,10 +15,11 @@ class CreateRoomNumbersTable extends Migration
     {
         Schema::create('room_numbers', function (Blueprint $table) {
             $table->bigIncrements('id');
-            // $table->string('building_name');
+            $table->string('building_name');
             $table->string('floor_number');
             $table->string('room_number');
             $table->integer('capacity');
+            $table->integer('count')->default(0);
             $table->timestamps();
         });
     }

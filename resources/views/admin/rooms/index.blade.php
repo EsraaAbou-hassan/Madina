@@ -39,9 +39,10 @@
                   <thead >
                     <tr>
                      <th>المتسلسل</th>
-                      <!-- <th>اسم المبنى</th> -->
+                      <th>اسم المبنى</th>
                       <th>رقم الدور</th>
                       <th>عدد الطلاب بالغرفة</th>
+                      <th>الحد الأقصى لعدد الطلاب</th>
                       <th>تاريخ الإنشاء</th>
                       
                      
@@ -51,9 +52,10 @@
                   @foreach($numbers as $number)
                   <tr >
                       <td>{{$number->id}}</td>
-                      <!-- <td>{{$number->building_name}}</td> -->
+                      <td>{{$number->building_name}}</td>
                       <td>{{$number->floor_number}}</td>
                       <td>{{$number->capacity}}</td>
+                      <td>{{$number->count}}</td>
                       <td>{{$number->created_at}}</td>
                      
                      

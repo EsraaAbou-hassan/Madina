@@ -779,22 +779,24 @@ font-weight: bold;
     /* background-color:#4d2314; */
     background-color:#927110d4;
     color:white;
-    margin-right: -70px;
-    margin-left: -70px;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius:0px;
    
 }
 .fa-facebook-square {
     color:#3549af;
-    background-color:#d0d8e0!important;
+    background-color:white!important;
+    
 }.fa-youtube-square {
    color:#e61717;
-   background-color:#d0d8e0!important;
+   background-color:white!important;
 }.fa-twitter-square{
    color:#1692f5;
-   background-color:#d0d8e0!important;
+   background-color:white!important;
 }.fa-whatsapp-square{
    color:green;
-   background-color:#d0d8e0!important;
+   background-color:white!important;
 }.text-secondary {
     color: #d0d8e0!important;
 }

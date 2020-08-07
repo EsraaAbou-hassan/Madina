@@ -107,15 +107,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a href="/admin/building" class="nav-link">
-            
-            <i class="fas fa-building"></i>
-              <p>
-                     المباني السكنية
-              </p>
-            </a>
-          </li>
+         
           <li class="nav-item ">
             <a href="/admin/rooms" class="nav-link">
             

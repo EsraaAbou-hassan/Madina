@@ -71,7 +71,6 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,func
     Route::resource('/students', 'studentController');
     Route::get('/students/accept/{student}', 'studentController@accept');
     Route::get('/students/reject/{student}', 'studentController@reject');
-    Route::resource('/building', 'buildingController');
     Route::resource('/rooms', 'roomNumberController');
   
    
