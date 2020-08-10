@@ -5,7 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\roomNumber;
-
+use DB;
 class roomNumberController extends Controller
 {
     /**
@@ -42,7 +42,7 @@ class roomNumberController extends Controller
     {
         $request->validate([
            
-            // 'building_name' => ['required'],
+            'building_name' => ['required'],
             'floor_number' => ['required'],
             'room_number' => ['required'],
             'capacity' => ['required'],
@@ -52,13 +52,14 @@ class roomNumberController extends Controller
          ]);
 
          roomNumber::create([
-            // 'building_name' => $request[''building_name'],
+            'building_name' => $request['building_name'],
              'floor_number' => $request['floor_number'],
              'room_number' => $request['room_number'],
              'capacity' => $request['capacity'],
              
              
         ]);
+        return redirect('/admin/rooms')->with('statues','room Created');
     }
 
     /**
@@ -78,10 +79,11 @@ class roomNumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+    public  function edit($id){
+        
+        $number=roomNumber::find($id);
+        return view('/admin.rooms.edit',compact('number'));
+    } 
 
     /**
      * Update the specified resource in storage.
@@ -90,10 +92,26 @@ class roomNumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+    public  function update(Request $request,$id){
+
+        //   return  $request->all();
+          $request->validate([
+           
+            'building_name' => ['required'],
+            'floor_number' => ['required'],
+            'room_number' => ['required'],
+            'capacity' => ['required'],
+        ]);
+        $number=roomNumber::find($id);
+        $number->update([
+            'building_name' => $request['building_name'],
+            'floor_number' => $request['floor_number'],
+            'room_number' => $request['room_number'],
+            'capacity' => $request['capacity'],
+            
+        ]);
+        return redirect('/admin/rooms')->with('statues','Room Updeated');
+        }
 
     /**
      * Remove the specified resource from storage.
@@ -101,8 +119,12 @@ class roomNumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+    public  function destroy($id){
+        
+        $number=roomNumber::find($id);
+        $number->delete();
+        return redirect()->back()->with('statues','Room Delete');
+
+
     }
 }

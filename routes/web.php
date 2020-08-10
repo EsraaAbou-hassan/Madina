@@ -62,6 +62,7 @@ Route::get('/takdimTalapAlelthak','User\requestController@index');
 Route::post('/takdimTalapAlelthak','User\requestController@store');
 Route::get('/ekhterMakanek','User\roomController@index');
 Route::post('/ekhterMakanek','User\roomController@store');
+Route::post('/ekhterMakanek/fetch','User\roomController@fetch')->name('roomController.fetch');
 
 
 Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,function(){

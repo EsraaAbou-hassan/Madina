@@ -16,8 +16,8 @@ class CreateRoomsTable extends Migration
         Schema::create('rooms', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('building_name');
-            $table->string('flat');
-            $table->string('floor');
+            $table->string('floor_number');
+            $table->string('room_number');
             $table->string('friend_name')->nullable();
             $table->string('friend_collage')->nullable();
             $table->string('friend_grade')->nullable();

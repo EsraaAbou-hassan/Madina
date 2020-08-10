@@ -34,16 +34,19 @@
                 
               </div>
               <!-- /.card-header -->
-              <div class="card-body table-responsive p-0" style="height: 300px;">
+              <div class="card-body table-responsive p-0">
                 <table class="table table-head-fixed text-nowrap">
                   <thead >
                     <tr>
                      <th>المتسلسل</th>
                       <th>اسم المبنى</th>
                       <th>رقم الدور</th>
+                      <th>رقم الغرفة</th>
                       <th>عدد الطلاب بالغرفة</th>
                       <th>الحد الأقصى لعدد الطلاب</th>
                       <th>تاريخ الإنشاء</th>
+                      <th>(احذف /عدل)بياناتك</th>
+
                       
                      
                     </tr>
@@ -54,13 +57,28 @@
                       <td>{{$number->id}}</td>
                       <td>{{$number->building_name}}</td>
                       <td>{{$number->floor_number}}</td>
+                      <td>{{$number->room_number}}</td>
                       <td>{{$number->capacity}}</td>
                       <td>{{$number->count}}</td>
                       <td>{{$number->created_at}}</td>
                      
                      
-                  </tr>
-                   
+                  
+                  <td> 
+                      <a  href="/admin/rooms/{{$number->id}}/edit" class="btn btn-info btn-sm"> 
+                      <i class="fa fa-edit "></i>عدل</a>
+                      <a  href="" class="btn btn-danger btn-sm" onclick="event.preventDefault();
+                             return confirm('Are you sure want to delete this room')? $(this).find('.delete-form').submit():'';"> 
+                      <i class="fa fa-trash "></i>حذف
+                      <form class="delete-form" action="/admin/users/{{$number->id}}" method="POST" 
+                         style="display: none;">
+                         @method('Delete')
+                         @csrf
+                        </form>
+                        </a>
+                      </td>
+                     
+                      </tr>
                     @endforeach
                   </tbody>
                 </table>

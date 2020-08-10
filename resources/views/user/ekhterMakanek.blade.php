@@ -25,55 +25,41 @@
                                 
                                 <label>اسم المبني: </label>
                             
-                                <select name="building_name">
-                                    
-                                        <option value="مبني ه">مبني ه</option>
+                                <select name="building_name" id="building_name" class=" form-control dynamic" data-dependent="floor_number">
+                                @foreach($rooms->$room)
+                                        <option value="{{$room->building_name}}">{{$room->building_name}}</option>
+                                   @endforeach 
+                                        <!-- <option value="مبني ه">مبني ه</option>
                                         <option value="مبني ز">مبني ز</option>
                                         <option value="مبني ج">مبني ج</option>
                                         <option value="مبني ب">مبني ب</option>
                                         <option value="مبني ح">مبني ح</option>
                                         <option value="مبني د">مبني د</option>
                                         <option value="مبني أ">مبني أ</option>
-                                        <option value="مبني و">مبني و</option>
+                                        <option value="مبني و">مبني و</option> -->
                                 </select>
 
                                 <label> إسم الدور:</label>
-                                <select name="flat">
-                                    <option  value="ground">الدور  الارضي </option>
+                                <select name="floor_number" id="floor_number"  class=" form-control dynamic" data-dependent="room_number">
+                               
+                                        <option value=""></option>
+                                  
+                                    <!-- <option  value="ground">الدور  الارضي </option>
                                     <option   value="first">الدور  الاول </option>
                                     <option   value="second">الدور  الثاني </option>
                                     <option   value="third">الدور الثالث</option>
                                     <option  value="fourth">الدور الرابع </option>
-                                    <option   value="fifth">الدور الخامس</option>
+                                    <option   value="fifth">الدور الخامس</option> -->
                                 
                                 </select>
                                 <label class="room"> رقم الغرفه: </label>           
-                                <select class="ground floor">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                <select  name="room_number" id="room_number" class=" form-control dynamic">
+                                   
+                                        <option value=""></option>
+                                     
                                 </select>
-                                <select class="first floor">
-                                        <option>111</option>
-                                        <option>112</option>
-                                </select>
-                                <select class="second floor">
-                                        <option>211</option>
-                                        <option>212</option>
-                                </select>
-                                <select class="third floor">
-                                         <option>311</option>
-                                         <option>312</option>
-                                </select>
-                                <select class="fourth floor">
-                                        <option>411</option>
-                                        <option>412</option>
-                                </select>
-                                <select class="fifth floor">
-                                        <option>511</option>
-                                        <option>512</option>
-                                </select>
-    
+                               
+                             {{csrf_field()}}
                                
                             </div>
                 

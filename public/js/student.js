@@ -1,7 +1,7 @@
-$(function(){
+$(document).ready(function(){
     $(".old_student").hide();
     $(".new_student").hide();
-    $(".room").hide()
+    
    
  
  
@@ -16,16 +16,28 @@ $(function(){
       
     });
     
-    $(this).find("option:selected").each(function(){
-        var optionValue = $(this).attr("value");
-        if(optionValue){
-            $(".floor").not("." + optionValue).hide();
-            $("." + optionValue).show();
-            $(".room").show();
-        } else{
-            $(".floor").hide();
-        }
-    
-}).change();
+  $('.dynamic').change(function(){
+      if($(this).val() !=''){
+          var select=$(this).attr("id");
+          var value=$(this).val();
+          var dependent=$(this).data('dependent');
+          var _token =$('input[name="_token"].val()');
+          $.ajax({
+              url:"{{route('roomController.fetch')}}",
+              method:"POST",
+              data:{select:select,value:value,_token:_token,dependent:dependent},
+              success:function(result){
+                  $('#'+dependent).html(result);
+              }
+          })
+      }
+  });
+  $('#building_name').change(function(){
+    $('#state').val('');
+    $('#floor_number').val('');
+});
+$('#state').change(function(){
+    $('#room_number').val('');
+});
 
 });

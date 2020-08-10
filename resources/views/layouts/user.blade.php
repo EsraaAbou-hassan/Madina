@@ -11,7 +11,7 @@
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/main.css')}}"> 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  
 
     
     <title>@yield('title')</title>    
@@ -143,13 +143,25 @@
                               <p>العنوان :- مدينه نصر الحي السادس</p>
                               <p>خريطه الوصول للمدينه الجامعيه</p>
                         </div>
-                         line-height
+                        
                          <div class="col-6">
                             <h4> تابعونا على :-</h4>
-                            <i class="fab fa-facebook-square  "style="font-size:50px"></i>
-                            <i class="fab fa-youtube-square"style="font-size:50px"></i>
-                            <i class="fab fa-whatsapp-square"style="font-size:50px"></i>
-                            <i class="fab fa-twitter-square"style="font-size:50px"></i>
+                            
+                                   <i class="fab fa-facebook" ></i>
+                           
+                            
+                                   <i class="fab fa-youtube"></i>
+                           
+                            
+                                  <i class="fab fa-whatsapp"></i>
+                           
+                            
+                                 <i class="fab fa-twitter"></i>
+                           
+                           
+                            
+                            
+                            
                          </div>
                     
                 </div>
@@ -162,13 +174,13 @@
            
     
     
-   
+    <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>  
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- AdminLTE App -->
 
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
-<script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
+
 <script src="{{asset('js/student.js')}}"></script>
 
-    </body>
+</body>
