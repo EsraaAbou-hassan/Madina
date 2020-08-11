@@ -16,24 +16,27 @@ $(document).ready(function(){
       
     });
     
-  $('.dynamic').change(function(){
-      if($(this).val() !=''){
-          var select=$(this).attr("id");
-          var value=$(this).val();
-          var dependent=$(this).data('dependent');
-          var _token =$('input[name="_token"].val()');
+  $('#floor_number').change(function(){
+      if( $(this).val() !='' && $('#building_name').val() !='') {
+          
+          var building_name = $('#building_name').val();
+          var floor_number = $(this).val();
+
+          var _token = $('input[name="_token"]').val();
+          
           $.ajax({
-              url:"{{route('roomController.fetch')}}",
+              url:"/ekhterMakanek/fetch",
               method:"POST",
-              data:{select:select,value:value,_token:_token,dependent:dependent},
+              data:{building_name:building_name,floor_number:floor_number,_token:_token,},
               success:function(result){
-                  $('#'+dependent).html(result);
+                  $('#room').html(result);
               }
           })
       }
   });
+
   $('#building_name').change(function(){
-    $('#state').val('');
+    $('#room').val('');
     $('#floor_number').val('');
 });
 $('#state').change(function(){

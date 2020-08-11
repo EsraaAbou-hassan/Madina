@@ -42,8 +42,8 @@
                       <th>اسم المبنى</th>
                       <th>رقم الدور</th>
                       <th>رقم الغرفة</th>
-                      <th>عدد الطلاب بالغرفة</th>
-                      <th>الحد الأقصى لعدد الطلاب</th>
+                      <th>سعة الغرفة</th>
+                      <th>الإشغال</th>
                       <th>تاريخ الإنشاء</th>
                       <th>(احذف /عدل)بياناتك</th>
 
@@ -52,25 +52,25 @@
                     </tr>
                   </thead>
                   <tbody>
-                  @foreach($numbers as $number)
+                  @foreach($rooms as $room)
                   <tr >
-                      <td>{{$number->id}}</td>
-                      <td>{{$number->building_name}}</td>
-                      <td>{{$number->floor_number}}</td>
-                      <td>{{$number->room_number}}</td>
-                      <td>{{$number->capacity}}</td>
-                      <td>{{$number->count}}</td>
-                      <td>{{$number->created_at}}</td>
+                      <td>{{$room->id}}</td>
+                      <td>{{$room->building_name}}</td>
+                      <td>{{$room->floor_number}}</td>
+                      <td>{{$room->room_number}}</td>
+                      <td>{{$room->capacity}}</td>
+                      <td>{{$room->occupation}}</td>
+                      <td>{{$room->created_at}}</td>
                      
                      
                   
                   <td> 
-                      <a  href="/admin/rooms/{{$number->id}}/edit" class="btn btn-info btn-sm"> 
+                      <a  href="/admin/rooms/{{$room->id}}/edit" class="btn btn-info btn-sm"> 
                       <i class="fa fa-edit "></i>عدل</a>
                       <a  href="" class="btn btn-danger btn-sm" onclick="event.preventDefault();
                              return confirm('Are you sure want to delete this room')? $(this).find('.delete-form').submit():'';"> 
                       <i class="fa fa-trash "></i>حذف
-                      <form class="delete-form" action="/admin/users/{{$number->id}}" method="POST" 
+                      <form class="delete-form" action="/admin/users/{{$room->id}}" method="POST" 
                          style="display: none;">
                          @method('Delete')
                          @csrf

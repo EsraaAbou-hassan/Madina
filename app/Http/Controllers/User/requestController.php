@@ -74,7 +74,7 @@ class requestController extends Controller
             'income' => ['required'],
             'number' => ['required'],
             'build' => ['nullable'],
-            'room_id'=> ['nullable'],
+            'room_number'=> ['nullable'],
             'message' => ['nullable'],
             'ekrar' => ['required'],
          ]);
@@ -116,7 +116,7 @@ class requestController extends Controller
             'income' =>$request['income'],
             'number' =>$request['number'], 
             'build' =>$request['build'],
-            'room_id' =>$request['room_id'],
+            'room_number' =>$request['room_id'],
             'message' =>$request['message'],
             'ekrar' =>$request['ekrar'],
   

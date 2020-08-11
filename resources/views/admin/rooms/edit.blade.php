@@ -39,7 +39,7 @@
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="/admin/rooms/{{$number->id}}">
+              <form method="post" action="/admin/rooms/{{$room->id}}">
               @method('PUT')
               @csrf
                 <div class="card-body">

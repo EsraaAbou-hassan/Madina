@@ -62,7 +62,7 @@ Route::get('/takdimTalapAlelthak','User\requestController@index');
 Route::post('/takdimTalapAlelthak','User\requestController@store');
 Route::get('/ekhterMakanek','User\roomController@index');
 Route::post('/ekhterMakanek','User\roomController@store');
-Route::post('/ekhterMakanek/fetch','User\roomController@fetch')->name('roomController.fetch');
+Route::post('/ekhterMakanek/fetch','User\roomController@fetch')->name('room.fetch');
 
 
 Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,function(){
@@ -72,7 +72,7 @@ Route::group(['prefix'=>'admin','namespace'=>'admin','middleware'=>'auth'] ,func
     Route::resource('/students', 'studentController');
     Route::get('/students/accept/{student}', 'studentController@accept');
     Route::get('/students/reject/{student}', 'studentController@reject');
-    Route::resource('/rooms', 'roomNumberController');
+    Route::resource('/rooms', 'RoomsController');
   
    
 });

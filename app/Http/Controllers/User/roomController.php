@@ -8,11 +8,13 @@ use App\Room;
 use Illuminate\Support\Facades\DB;
 class roomController extends Controller
 {
-    public function index(){
-        $rooms=DB::table('room_numbers')->groupBy('building_name')->get();
-        return view( 'user.ekhterMakanek')->with('rooms',$rooms);
-       
-        }
+    public function index()
+    {
+        //$rooms = Room::all();
+
+        return view('user.ekhterMakanek');
+    }
+
         public function store(Request $request)
         {
             $request->validate([
@@ -41,22 +43,20 @@ class roomController extends Controller
             session()->flash('success','تم تقديم الطلب بنجاح');
             return redirect()->back();
         }
-        public function fetch( Request $request){
-            $select=$request->get('select');
-            $value=$request->get('value');
-            $dependent=$request->get('dependent');
-            $data=DB::table('room_numbers')->where($select,$value)->groupBy($dependent)->get();
-            $output .='<option value="">Select'.ucfirst($dependent).'</option>';
-            foreach($data as $row)
-            {
-                $output .='<option value="'.$row->$dependent.'">'.$row->$dependent.'</option>';
-            }
-            echo $output;
-
-           
-
-
-
-
+        
+    public function fetch(Request $request)
+    {
+        $rooms = Room::where('building_name', $request->building_name)
+            ->where('floor_number', $request->floor_number)
+            ->get();
+            
+        $output ='<option value="">Select Room</option>';
+        
+        foreach($rooms as $room)
+        {
+            $output .='<option value="'.$room->id.'">'.$room->room_number.'</option>';
         }
+        
+        echo $output;
+    }
 }

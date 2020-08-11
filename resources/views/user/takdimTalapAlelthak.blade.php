@@ -457,7 +457,7 @@
                                 <label>رقم الغرفه<bdi>:</bdi> </label>
                               </div>
                               <div class="col-3">
-                                <input type="text" class="form-control" name="room_id" value="{{old('room_id')}}"  >
+                                <input type="text" class="form-control" name="room_number" value="{{old('room_number')}}"  >
                               </div>
                         </div>
                         <div class="row">

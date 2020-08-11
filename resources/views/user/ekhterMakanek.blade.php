@@ -19,89 +19,41 @@
                         </div>
                 @endif
                 
-                    <div class="card-body text-secondary">
-                        
-                            <div class="form-group mx-sm-3 mb-2" >
+                <div class="card-body text-secondary">
+                    <div class="form-group mx-sm-3 mb-2" >
                                 
-                                <label>اسم المبني: </label>
-                            
-                                <select name="building_name" id="building_name" class=" form-control dynamic" data-dependent="floor_number">
-                                @foreach($rooms->$room)
-                                        <option value="{{$room->building_name}}">{{$room->building_name}}</option>
-                                   @endforeach 
-                                        <!-- <option value="مبني ه">مبني ه</option>
-                                        <option value="مبني ز">مبني ز</option>
-                                        <option value="مبني ج">مبني ج</option>
-                                        <option value="مبني ب">مبني ب</option>
-                                        <option value="مبني ح">مبني ح</option>
-                                        <option value="مبني د">مبني د</option>
-                                        <option value="مبني أ">مبني أ</option>
-                                        <option value="مبني و">مبني و</option> -->
-                                </select>
-
-                                <label> إسم الدور:</label>
-                                <select name="floor_number" id="floor_number"  class=" form-control dynamic" data-dependent="room_number">
-                               
-                                        <option value=""></option>
-                                  
-                                    <!-- <option  value="ground">الدور  الارضي </option>
-                                    <option   value="first">الدور  الاول </option>
-                                    <option   value="second">الدور  الثاني </option>
-                                    <option   value="third">الدور الثالث</option>
-                                    <option  value="fourth">الدور الرابع </option>
-                                    <option   value="fifth">الدور الخامس</option> -->
-                                
-                                </select>
-                                <label class="room"> رقم الغرفه: </label>           
-                                <select  name="room_number" id="room_number" class=" form-control dynamic">
-                                   
-                                        <option value=""></option>
-                                     
-                                </select>
-                               
-                             {{csrf_field()}}
-                               
-                            </div>
-                
+                        <label>اسم المبني: </label>
                     
-                    </div>
-                    <div class="card-header text-center ">
-                                    <i class="fas fa-user-friends" style="max-size:2x"> </i> 
-                                    <span>أشخاص مقترحون(اختياري)</span>
-                    </div>
-                    <div class="card-body text-secondary">
+                        <select name="building_name" id="building_name" class="form-control">
+                            <option value=""></option>
+                            <option value="أ">أ</option>
+                            <option value="ب">ب</option>
+                        </select>
 
-                       <div class="form-group mx-sm-3 mb-2" >
-  
+                        <label> إسم الدور:</label>
+                        <select name="floor_number" id="floor_number"  class="form-control">
+                            <option value=""></option>
+                            <option  value="0">الدور  الارضي </option>
+                            <option   value="1">الدور  الاول </option>
+                            <option   value="2">الدور  الثاني </option>
+                            <option   value="3">الدور الثالث</option>
+                            <option  value="4">الدور الرابع </option>
+                            <option   value="5">الدور الخامس</option>
                             
-                                <label> الإسم: </label>
-                                <input type="text"  name="friend_name" value=" الإسم"class="form-control" >
-                                </br>
-                                    <label> الكليه:</label>
-                                <input type="text"  name="friend_collage" value="الكليه"class="form-control" >
-                                </br>
-                                    <label> الفرقه:</label>
+                        </select>
 
-                                <select  name= "friend_grade" value="الفرقه" class="form-control">
-                                    <option value="">الفرقه الاعداديه</option>
-                                    <option value="">الفرقه الاولي </option>
-                                    <option value="">الفرقه الثانيه</option>
-                                    <option value="">الفرقه الثالثه</option>
-                                    <option value="">الفرقه الرابعه</option>
-                                    <option value="">الفرقه الخامسه </option>
-                                    <option value="">الفرقه السادسه</option>
-                            
-                                </select>
-                                
-                                <br>
-                                <label>الهوايات:</label>
-                                <input type="text" class="form-control" name="hobbies" value="هوايات">
-                                <br>
-                                    
-                                <button type="submit" class="btn btn-primary mb-2 "> إرسال </button>
-                        </div>    
-                        
+                            <label class="room"> رقم الغرفه: </label>           
+                            <select  name="room" id="room" class=" form-control">
+                                <option value=""></option>
+                            </select>
+                           
+                         {{csrf_field()}}
+                           
+                        </div>
+                
+                    <button type="submit" class="btn btn-primary mb-2 "> إرسال </button>
                     </div>
+                    
                 </form>
               
         </div>

@@ -3,10 +3,11 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use App\roomNumber;
+use App\Room;
 use DB;
-class roomNumberController extends Controller
+use Illuminate\Http\Request;
+
+class RoomsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +16,8 @@ class roomNumberController extends Controller
      */
     public function index()
     {
-        
-        $numbers=roomNumber::get();
-        return view( 'admin.rooms.index',compact('numbers'));
-    
+        $rooms = Room::get();
+        return view('admin.rooms.index', compact('rooms'));
     }
 
     /**     
@@ -28,7 +27,6 @@ class roomNumberController extends Controller
      */
     public function create()
     { 
-        
         return view( 'admin.rooms.create');
     }
 
@@ -40,25 +38,20 @@ class roomNumberController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-           
+        $request->validate([      
             'building_name' => ['required'],
             'floor_number' => ['required'],
             'room_number' => ['required'],
             'capacity' => ['required'],
-           
-           
-           
          ]);
 
-         roomNumber::create([
+        Room::create([
             'building_name' => $request['building_name'],
-             'floor_number' => $request['floor_number'],
-             'room_number' => $request['room_number'],
-             'capacity' => $request['capacity'],
-             
-             
+            'floor_number' => $request['floor_number'],
+            'room_number' => $request['room_number'],
+            'capacity' => $request['capacity'],   
         ]);
+
         return redirect('/admin/rooms')->with('statues','room Created');
     }
 
@@ -81,8 +74,8 @@ class roomNumberController extends Controller
      */
     public  function edit($id){
         
-        $number=roomNumber::find($id);
-        return view('/admin.rooms.edit',compact('number'));
+        $room = Room::find($id);
+        return view('/admin.rooms.edit', compact('room'));
     } 
 
     /**
