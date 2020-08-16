@@ -29,8 +29,6 @@ class roomController extends Controller
             $student->save();
 
             $room = Room::find($request->room)->increment('occupation');
-            // $room
-            // $room->save();
 
             session()->flash('success','تم تقديم الطلب بنجاح');
             return redirect()->back();
