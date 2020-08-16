@@ -29,7 +29,7 @@ $(document).ready(function(){
               method:"POST",
               data:{building_name:building_name,floor_number:floor_number,_token:_token,},
               success:function(result){
-                  $('#room').html(result);
+                $('#room').html(result);
               }
           })
       }
@@ -38,9 +38,6 @@ $(document).ready(function(){
   $('#building_name').change(function(){
     $('#room').val('');
     $('#floor_number').val('');
-});
-$('#state').change(function(){
-    $('#room_number').val('');
 });
 
 });

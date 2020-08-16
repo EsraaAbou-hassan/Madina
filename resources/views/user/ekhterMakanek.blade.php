@@ -20,8 +20,12 @@
                 @endif
                 
                 <div class="card-body text-secondary">
+
                     <div class="form-group mx-sm-3 mb-2" >
-                                
+
+                        <label>الرقم القومي</label>
+                        <input type="text" name="student_id" class="form-control mb-3">
+
                         <label>اسم المبني: </label>
                     
                         <select name="building_name" id="building_name" class="form-control">

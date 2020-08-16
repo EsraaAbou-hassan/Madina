@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Room;
+use App\Student;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 class roomController extends Controller
 {
@@ -18,28 +19,19 @@ class roomController extends Controller
         public function store(Request $request)
         {
             $request->validate([
-                'building_name' => ['required'],
-                'floor_number' => ['required'],
-                'room_number' => ['required'],
-                'friend_name' => ['nullable'],
-                'friend_collage' => ['nullable'],
-                'friend_grade' => ['nullable'],
-                'hobbies' => ['nullable'],
-               
-               
-             ]);
-    
-             Room::create([
-                 'building_name' => $request['building_name'],
-                 'floor_number' =>$request['floor_number'],
-                 'room_number' =>$request['room_number'],
-                 'friend_name' =>$request['friend_name'],
-                 'friend_collage' =>$request['friend_collage'],
-                 'friend_grade' =>$request['friend_grade'],
-                 'hobbies' =>$request['hobbies'],
-                 
+                'student_id' => 'required|exists:students,student_ssn',
+                'room' => 'required' 
             ]);
-             
+            
+            $student = Student::where('student_ssn', $request->student_id)->first();
+
+            $student->room_id = $request->room;
+            $student->save();
+
+            $room = Room::find($request->room)->increment('occupation');
+            // $room
+            // $room->save();
+
             session()->flash('success','تم تقديم الطلب بنجاح');
             return redirect()->back();
         }
@@ -48,8 +40,9 @@ class roomController extends Controller
     {
         $rooms = Room::where('building_name', $request->building_name)
             ->where('floor_number', $request->floor_number)
+            ->whereRaw('occupation < capacity')
             ->get();
-            
+
         $output ='<option value="">Select Room</option>';
         
         foreach($rooms as $room)

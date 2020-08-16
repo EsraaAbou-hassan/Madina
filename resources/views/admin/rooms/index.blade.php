@@ -70,7 +70,7 @@
                       <a  href="" class="btn btn-danger btn-sm" onclick="event.preventDefault();
                              return confirm('Are you sure want to delete this room')? $(this).find('.delete-form').submit():'';"> 
                       <i class="fa fa-trash "></i>حذف
-                      <form class="delete-form" action="/admin/users/{{$room->id}}" method="POST" 
+                      <form class="delete-form" action="/admin/rooms/{{$room->id}}" method="POST" 
                          style="display: none;">
                          @method('Delete')
                          @csrf

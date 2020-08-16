@@ -56,8 +56,7 @@ class CreateStudentsTable extends Migration
             $table->string('ekrar');
             $table->tinyInteger('is_accepted')->default(0);
 
-            $table->unsignedBigInteger('room_id');
-            $table->foreign('room_id')->references('id')->on('rooms');
+            $table->foreignId('room_id')->nullable();
 
             $table->timestamps();
             
