@@ -28,9 +28,16 @@
                             <option value=""></option>
                             <option value="أ">أ</option>
                             <option value="ب">ب</option>
+                            <option value="ج">ج</option>
+                            <option value="ح">ح</option>
+                            <option value="د">د</option>
+                            <option value="ز">ز</option>
+                            <option value="ه">ه</option>
+                            <option value="و">و</option>
+
                         </select>
 
-                        <label> إسم الدور:</label>
+                        <label> رقم الدور:</label>
                         <select name="floor_number" id="floor_number"  class="form-control">
                             <option value=""></option>
                             <option  value="0">الدور  الارضي </option>
@@ -42,7 +49,7 @@
                             
                         </select>
 
-                            <label class="room"> رقم الغرفه: </label>           
+                            <label > رقم الغرفه: </label>           
                             <select  name="room" id="room" class=" form-control">
                                 <option value=""></option>
                             </select>

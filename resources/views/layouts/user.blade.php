@@ -25,7 +25,7 @@
                <img src="{{asset('img/download.jpg')}}" alt="الازهر">
            </div>
            
-             <p class="b"> التحويل الرقمي </p>
+             <p class="b"> التحول الرقمي </p>
              
            <div class=" two">
                <p class="i">المدينة الجامعية بنات</p>

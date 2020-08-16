@@ -95,8 +95,8 @@ class RoomsController extends Controller
             'room_number' => ['required'],
             'capacity' => ['required'],
         ]);
-        $number=roomNumber::find($id);
-        $number->update([
+        $rooms=Room::find($id);
+        $rooms->update([
             'building_name' => $request['building_name'],
             'floor_number' => $request['floor_number'],
             'room_number' => $request['room_number'],
@@ -114,7 +114,7 @@ class RoomsController extends Controller
      */
     public  function destroy($id){
         
-        $number=roomNumber::find($id);
+        $number=Room::find($id);
         $number->delete();
         return redirect()->back()->with('statues','Room Delete');
 

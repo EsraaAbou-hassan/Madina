@@ -558,7 +558,7 @@ body {
        font-weight: 500;
         font-family: unset;
         text-align: center;
-        background-color: #9e9e9e40;
+        background-color: #5288a0;
     
     }
     
@@ -567,6 +567,7 @@ body {
         float: right;
         margin-top: 15px;
         font-size: 30px;
+        color: #406684;
        
        }.natigatElkopol input{
            display: block;
@@ -784,12 +785,7 @@ font-weight: bold;
     border-radius:0px;
    
 }
- .footer a{
-/*     
-    display: inline; */
-    color:white!important;
-    /* margin:2px; */
-}
+
 .footer i.fab{
 font-size:50px  ;
 background-color: white;  

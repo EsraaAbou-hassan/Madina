@@ -44,9 +44,20 @@
               @csrf
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="building_name">الإسم</label>
-                        <input type="text" class="form-control @error('name') is-invalid @enderror" id="building_name" 
-                        name="building_name" placeholder="ادخل اسم المبنى">
+                        
+                  <label for="building_name">اسم المبنى</label>
+                        <select name="building_name" id="building_name"  class=" form-control @error('building_name') is-invalid @enderror" 
+                        value="{{$room->building_name}}">
+                                        <option value=""></option>
+                                        <option value="مبني ه">مبني ه</option>
+                                        <option value="مبني ز">مبني ز</option>
+                                        <option value="مبني ج">مبني ج</option>
+                                        <option value="مبني ب">مبني ب</option>
+                                        <option value="مبني ح">مبني ح</option>
+                                        <option value="مبني د">مبني د</option>
+                                        <option value="مبني أ">مبني أ</option>
+                                        <option value="مبني و">مبني و</option>
+                      </select>       
                         
                         @error('building_name')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -54,21 +65,33 @@
                     </div>
                   <div class="form-group">
                     <label for="floor_number">رقم الدور</label>
-                    <input type="text" class="form-control @error('floor_number') is-invalid @enderror" id="floor_number"  name="floor_number" placeholder="ادخل رقم الغرفه">
+                    <select name="floor_number" id="floor_number"  class=" form-control @error('floor_number') is-invalid @enderror" 
+                    data-dependent="floor_number" value="{{$room->floor_number}}">
+                               
+                                 <option value=""></option>
+                                  <option  value="الدور الأرضي">الدور  الارضي </option>
+                                  <option   value="الدور الأول">الدور  الاول </option>
+                                  <option   value="الدور الثاني">الدور  الثاني </option>
+                                  <option   value="الدور الثالث">الدور الثالث</option>
+                                  <option  value="الدور الرابع">الدور الرابع </option>
+                                  <option   value="الدور الخامس">الدور الخامس</option>
+                       </select>  
                     @error('floor_number')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
                     <label for="room_number">رقم الغرفة</label>
-                    <input type="room_number" class="form-control @error('room_number') is-invalid @enderror" id="room_number" name="room_number" placeholder="ادخل رقم الغرفة">
+                    <input type="room_number" class="form-control @error('room_number') is-invalid @enderror" id="room_number"
+                     name="room_number" placeholder="ادخل رقم الغرفة" value="{{$room->room_number}}">
                     @error('room_number')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
                     <label for="capacity">عدد الأفراد في كل غرفه</label>
-                    <input type="capacity" class="form-control @error('capacity') is-invalid @enderror" id="capacity" name="capacity" placeholder="ادخل عدد الأفرادة">
+                    <input type="capacity" class="form-control @error('capacity') is-invalid @enderror" id="capacity" name="capacity" 
+                    placeholder="ادخل عدد الأفرادة"  value="{{$room->capacity}}">
                     @error('capacity')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

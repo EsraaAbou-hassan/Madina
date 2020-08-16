@@ -39,10 +39,7 @@
                       <th>اسم المبنى</th>
                       <th>اسم الدور</th>
                       <th>رقم الغرفة</th>
-                      <th>الإسم</th>
-                      <th>الكلية</th>
-                      <th>الفرقة</th>
-                      <th>الهوايات</th>
+                      
                       
                       
                      
@@ -53,12 +50,10 @@
                       <tr >
                             <td>{{$reserve->id}}</td>
                             <td>{{$reserve->building_name}}</td>
-                            <td>{{$reserve->flat}}</td>
-                             <td>{{$reserve->floor}}</td>
-                             <td>{{$reserve->friend_name}}</td>
-                             <td>{{$reserve->friend_collage}}</td>
-                             <td>{{$reserve->friend_grade}}</td>
-                             <td>{{$reserve->hobbies}}</td>
+                            <td>{{$reserve->floor_number}}</td>
+                             <td>{{$reserve->room}}</td>
+                             
+                             
                         </tr>
                    
                   @endforeach
