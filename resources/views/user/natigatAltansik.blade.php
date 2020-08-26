@@ -2,8 +2,8 @@
 @section('title','نتيجة التنسيق')
 @section('content')
 <form class="natigatAltansik">
-          <fieldset >
-                <legend text-center > نتيجه التنسيق</legend>
+          
+                <div> نتيجه التنسيق</div>
             
                <ol>
                   <li>
@@ -17,6 +17,6 @@
                   </li>
                   
                </ol>
-           </fieldset>
+           
         </form>
 @endsection

@@ -1,6 +1,7 @@
 @extends('layouts.user')
 @section('title','تقديم طلب الالتحاق')
 @section('content')
+
 <div class="tolap">
              
                    
@@ -175,23 +176,7 @@
                           </div>
                 
                       </div>
-                    <div class="row">
-                      <div class="form-group col-3">
-                        <label> كلمة المرور<bdi>:</bdi> </label>
-                        </div>
-                    <div class="form-group col-3">
-                        <input type="password" class="form-control"  name="password"  value="{{old('password')}}" required >
-                  </div>
-                    </div>
                     
-                  <div class="row">
-                      <div class="form-group col-3">
-                        <label> تأكيد كلمة المرور<bdi>:</bdi> </label>
-                        </div>
-                        <div class="form-group col-3">
-                            <input type="password" name="sure_password" value="{{old('sure_password')}}" required class="form-control" >
-                        </div>
-                  </div>
                   
                   <div class="row">
                       <div class="form-group col-3">
@@ -230,7 +215,7 @@
                   
                   <div class="row">
                       <div class="form-group col-3">
-                        <label> رقم الموبايل<bdi>:</bdi> </label>
+                        <label> رقم الموبيل<bdi>:</bdi> </label>
                         </div>
                        <div class="form-group col-3">
                         <input type="text"  name="father_mobile" value="{{old('father_mobile')}}" required class="form-control">

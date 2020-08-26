@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRoomReservationsTable extends Migration
+class CreateEltmasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class CreateRoomReservationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_reservations', function (Blueprint $table) {
+        Schema::create('eltmas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('room_id');
-            $table->foreignId('student_id');
+            $table->string('iltmas');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class CreateRoomReservationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('room_reservations');
+        Schema::dropIfExists('eltmas');
     }
 }

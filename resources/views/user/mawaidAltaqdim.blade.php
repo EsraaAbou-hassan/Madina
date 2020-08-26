@@ -2,7 +2,7 @@
 @section('title','مواعيد التقديم')
 @section('content')
 <form class="mawaidAltakdim">
-        <fieldset>
+        <div class="container">
             <legend>مواعيد التسجيل  للالتحاق بالمدن الجامعيه </legend>
             <div >
             <p>من يوم الأحد الموافق 1 أغسطس حتى الأحد الموافق 20أغسطس لسنوات النقل
@@ -15,6 +15,6 @@
                 تنويه هام:على كل طالب الالتزام بموعد التقديم الخاص به 
               </p>
               </div>
-        </fieldset>
+        </div>
        </form> 
 @endsection

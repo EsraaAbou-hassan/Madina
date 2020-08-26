@@ -2,8 +2,12 @@
 body {
     direction: rtl;
     font-family: Arial;
+    /* background: url(public/img/tt.png); */
+    /* background-image:url(public/img/tt.png); */
+    /* background-image:"{{asset('img/tt.png')}}"; */
+    background-size:cover;
   
-   /* text-align: left;*/
+   
 }
 /*start main (اhome bage)*/
 /* start   first nav */
@@ -244,20 +248,17 @@ body {
            border: 2px solid #085049;
            background-color: #f7efef;
            text-align:right;
+           border-radius: 20px;
+           padding-right: 20px;
          
            
-       }.khatawat legend{
-           color: red;
-           margin-top: 30px
        }
        .khatawat div{
+           margin-top: 30px;
+           color:brown;
            text-align: center;
            font-style: italic;
            font-size: 35px;
-           color: #085049;
-           background-color: white;
-           margin-right: 3px;
-           width:200px;
            margin: 20px auto;
           
        }
@@ -281,27 +282,31 @@ body {
 
   /* end khatwatAlelthaq  */
   /* start frooAukhra  */
-            .frooAkhraa{
-               margin: auto;
-               margin-top: 50px;
-               max-width: 30rem;
+    .frooAkhraa .card{
+               margin: 50px auto;
+               border: 2px solid #085049;
+               max-width: 500px;
+               background-color:#ece4e4;
        }
-       .frooAkhraa.card{
+       /* .frooAkhraa.card{
            margin-bottom: 1rem!important;
           
-       }
-       .frooAkhraa.card-header{
+       } */
+       .frooAkhraa .card .card-header{
            text-align: center;
+           background-color: #d4c6c6;
            font-size: 20px;
            color: #000040;
        }
-       .frooAkhraa ul{
+       .frooAkhraa .card ul{
            direction: rtl;
            text-align: right;
            padding: 20px;
-           margin: 20px;
+           margin-right: 20px;
+           margin-left: 20px;
            list-style-type: circle;
           color: #111861;
+          font-size:23px;
        
          
          
@@ -312,28 +317,28 @@ body {
           margin:100px auto;
           width:700px;
           height: 300px;
-          direction: rtl;
           border: 2px solid #085049;
           background-color: #fdfbfb;
-          text-align:right;
           font-size: 40px;
+          border-radius: 20px;
       
         
       }
-      .natigatAltansik  legend{
+      .natigatAltansik div{
           text-align: center;
           color:red;
           font-weight: bold;
-          font-size: 30px;
+          font-size: 40px;
+          margin-top: 20px;
       }
       
       .natigatAltansik ol{
-          direction: rtl;
+          
           text-align: right;
           padding: 20px;
-          margin: 20px;
+          margin-right: 20px;
+          margin-left: 20px;
           list-style-type: arabic-indic;
-        
           font-size:25px;
         
       }
@@ -347,6 +352,7 @@ body {
            margin: 100px auto;
            border: 2px solid #085049;
            background-color: #fdfbfb;
+           border-radius: 20px;
        }
        
        .almabaniAlsakania  legend{
@@ -376,6 +382,7 @@ body {
          .almabaniAlsakania  bdi{
            color: yellow;
            padding: 5px;
+           margin: 5px;
            font-weight: bold;
            font-size: 30px;
            
@@ -536,20 +543,18 @@ body {
 
 /*  start natigatAlkopol */
     .natigatElkopol{
-        margin: auto;
-        margin-top: 90px;
+        margin: 100px auto;
         width: 500px;
         height: 250px;
       
        
-    }.natigatElkopol.card {
+    }.natigatElkopol .card {
         background-color: #f0f5f7;
+        border-radius:5px;
+        box-shadow: 1px 1px 5px 5px black;
         
-        border-radius:60px;
-        
-        box-shadow: 1px 1px 5px black;
-        
-    }.natigatElkopol div.card-body {
+    }
+    .natigatElkopol div.card-body {
         padding: 20px;
        
     }
@@ -565,7 +570,7 @@ body {
     .natigatElkopol p.card-title{
         margin-bottom:0.75rem;
         float: right;
-        margin-top: 15px;
+        margin-top:15px;
         font-size: 30px;
         color: #406684;
        
@@ -575,7 +580,7 @@ body {
     .natigatElkopol button{
         cursor: pointer;
         float: right;
-        margin-right: 180px;
+        margin: 50px auto;
         margin-top: 20px;
     }
      
@@ -611,31 +616,35 @@ body {
       }
 /*end ershadat*/
 /*start mawaidAltakdim */
-        .mawaidAltakdim fieldset{
+        .mawaidAltakdim div.container{
             height: 300px;
-            margin: auto;
+            margin: 100px auto;
             width: 800px;
             margin-top: 50px;
+            border: 3px solid #3c648c;
+            border-radius: 20px;
             }
         .mawaidAltakdim legend{
             text-align: center;
             color: red;
             font-weight: bold;
             font-size: 30px;
+            margin: 20px;
         }
         .mawaidAltakdim div{
            font-weight: bold;
-           direction: rtl;
            line-height: 10px;
            letter-spacing: .5px;
            font-size: 23px;
            text-align: center;
-           padding: 10px
+           padding: 20px;
+           margin: 20px;
+
         }
         .mawaidAltakdim p.tt{
             
             color: #fba200;
-            padding: 50px;
+            padding: 40px;
 }
 /*end mawaidAltakdim*/
 /*start gadwalAltaskin*/
@@ -721,30 +730,32 @@ body {
 
 /*end tasgilAldokhol*/
 /*start eltmas*/
+.eltmas{
+    text-align: center;
+     margin-top: 30px;
+}
+.eltmas h1{
+   color:blue;
+   margin-right: 220px;
+    
+}
 .eltmas textarea{
     border:solid gray 2px;
-    margin: auto;
+    margin-right: 150px;
    
 }
-.eltmas label{
 
-color: blue;
-font-size: 20px;
-font-weight: bold;
-}
-.eltmas div{
-      text-align: center;
-       margin-top: 30px;
-}
+
 .eltmas button {
    
     cursor: pointer;
     margin-top: 20px;
     background-color:blue;
     color: white;
-    width: 75px;
+    width: 200px;
     height: 35px;
     font-weight: bold;
+    margin-right: 200px;
 }
 
 /*end eltmas*/
@@ -754,13 +765,14 @@ font-weight: bold;
         margin: auto;
        
     }
-    .shakawy label{
+    .shakawy h1{
     
     color: blue;
-    font-size: 20px;
-    font-weight: bold;
+    /* font-size: 20px;
+    font-weight: bold; */
     }
     .shakawy div{
+
           text-align: center;
            margin-top: 30px;
     }
@@ -770,11 +782,54 @@ font-weight: bold;
         margin-top: 20px;
         background-color:blue;
         color: white;
-        width: 75px;
+        width: 200px;
         height: 35px;
         font-weight: bold;
+        display:block;
+        margin-right: 450px;
     }
 /*end shakawy*/
+/* start dafielmasrofat */
+     .dafielmasrofat{
+        margin:100px auto;
+        width:700px;
+        border-radius: 30px;
+        border: 2px solid #085049;
+        background-color: #f7efef;
+
+     }
+     .dafielmasrofat div{
+        width: 200px;
+        margin: auto;
+        text-align: center;
+        font-size: 35px;
+        margin-top: 35px;
+        font-family: auto;
+        color:#52527b;
+        
+    }
+    .dafielmasrofat ul{
+        direction: rtl;
+        text-align: right;
+        padding: 20px;
+        margin: 20px;
+        list-style-type: circle;
+        
+      
+      
+    }
+    
+    .dafielmasrofat li {
+          color:#578c87;
+          font-size: 25px;  
+    }.dafielmasrofat span {
+        color:blue;
+       display: block;  
+       text-align: center;
+       font-size: 30px; 
+  }
+    
+/*end dafielmasrofat*/
 /* start footer */
 .footer{
     /* background-color:#4d2314; */

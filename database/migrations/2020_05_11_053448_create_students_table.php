@@ -29,8 +29,8 @@ class CreateStudentsTable extends Migration
             $table->string('collage');
             $table->string('student_id');
             $table->string('peciture');
-            $table->string('password');
-            $table->string('sure_password');
+            $table->string('password')->nullable();
+            
             $table->string('father_name');
             $table->string('relation');
             $table->string('father_ssn'); 

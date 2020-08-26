@@ -62,7 +62,8 @@
                     </div>
                   <div class="form-group">
                     <label for="floor_number">رقم الدور</label>
-                    <select name="floor_number" id="floor_number"  class=" form-control @error('capacity') is-invalid @enderror" data-dependent="room_number">
+                    <select name="floor_number" id="floor_number"  class=" form-control @error('capacity') is-invalid @enderror"
+                     data-dependent="room_number">
                           <option value=""></option>
                           <option  value="0">الدور  الارضي </option>
                           <option   value="1">الدور  الاول </option>
@@ -77,14 +78,16 @@
                   </div>
                   <div class="form-group">
                     <label for="room_number">رقم الغرفة</label>
-                    <input type="room_number" class="form-control @error('room_number') is-invalid @enderror" id="room_number" name="room_number" placeholder="ادخل رقم الغرفة">
+                    <input type="room_number" class="form-control @error('room_number') is-invalid @enderror" id="room_number" 
+                    name="room_number" placeholder="ادخل رقم الغرفة">
                     @error('room_number')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror
                   </div>
                   <div class="form-group">
                     <label for="capacity">عدد الأفراد في كل غرفه</label>
-                    <input type="capacity" class="form-control @error('capacity') is-invalid @enderror" id="capacity" name="capacity" placeholder="ادخل عدد الأفرادة">
+                    <input type="capacity" class="form-control @error('capacity') is-invalid @enderror" id="capacity" 
+                    name="capacity" placeholder="ادخل عدد الأفرادة">
                     @error('capacity')
                             <div class="alert alert-danger">{{ $message }}</div>
                     @enderror

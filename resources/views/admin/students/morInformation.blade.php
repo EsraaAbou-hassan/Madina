@@ -98,14 +98,7 @@
                                         <img src="{{asset('storage/'. $student->peciture)}}" >
                                                 
                                             </li>
-                                            <li class="list-group-item">
-                                            <label> كلمة المرور<bdi>:</bdi> </label>
-                                                {{ $student->password }}
-                                            </li>
-                                            <li class="list-group-item">
-                                            <label> تأكيد كلمة المرور<bdi>:</bdi> </label>
-                                                {{ $student-> sure_password}}
-                                            </li>
+                                            
                                             <li class="list-group-item">
                                             <label>  اسم ولي الأمر<bdi>:</bdi> </label>
                                                 {{ $student->father_name }}

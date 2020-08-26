@@ -52,8 +52,6 @@ class requestController extends Controller
             'collage' => ['required'],
             'student_id'=> ['required'],
             'peciture' => ['required'],
-            'password' => ['required'],
-            'sure_password' => ['required'],
             'father_name' => ['required'],
             'relation' => ['required'],
             'father_ssn' => ['required'],
@@ -95,8 +93,7 @@ class requestController extends Controller
              'collage' =>$request['collage'],
              'student_id' => $request['student_id']->store('images','public'),
              'peciture' => $request['peciture']->store('images','public'),
-             'password' =>$request['password'],
-             'sure_password' =>$request['sure_password'],
+            
              'father_name' =>$request['father_name'],
              'relation' =>$request['relation'],
              'father_ssn' =>$request['father_ssn'], 

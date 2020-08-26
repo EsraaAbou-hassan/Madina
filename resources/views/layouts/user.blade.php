@@ -97,17 +97,15 @@
                 <li class="item2">
                       <a class="nav-link" href="/takdimTalapAlelthak">تقديم طلب الالتحاق &raquo;</a>
                   </li>
-                
-               <li class="item2">
-                       <a class="nav-link" href="/dafiAlmasrofat">دفع المصروفات &raquo;</a>
-               </li>
-               
-               <li class="item2">
-                       <a class="nav-link" href="/ekhterMakanek">اختر مكانك &raquo;</a>
-                 </li>
-               <li class="item2">
+                <li class="item2">
                        <a class="nav-link" href="/nategatAlqupole">نتيجة القبول &raquo;</a>
-                 </li>
+                </li>
+              
+               
+                <li class="item2">
+                       <a class="nav-link" href="/ekhterMakanek">اختر مكانك &raquo;</a>
+                </li>
+               
             </ul>
         </div>
             
@@ -118,20 +116,20 @@
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
+  
+
+  
+ 
+ 
   @if(session()->has('success'))
-        <div class="container">
-          <div class="alert alert-success">
+        <div class="container" >
+          <div class="alert alert-success" >
               {{session()->get('success')}}
           </div>
         </div>
        @endif
 
   @yield('content')
-
-  
- 
- 
-  
  
   <div class="card footer ">
     <div class="card-body ">

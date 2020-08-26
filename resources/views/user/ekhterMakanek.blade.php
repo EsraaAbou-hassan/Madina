@@ -1,6 +1,7 @@
 @extends('layouts.user')
 @section('title','اخترمكانك')
 @section('content')
+
     <div class="ekhtarMakanak">
         <div class="card border-secondary mb-3">
                 <form action="/ekhterMakanek" method="post"  enctype="multipart/form-data">

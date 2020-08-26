@@ -23,8 +23,15 @@ class roomController extends Controller
                 'room' => 'required' 
             ]);
             
-            $student = Student::where('student_ssn', $request->student_id)->first();
+            $student = Student::where('student_ssn', $request->student_id)
+             ->where('is_accepted',1)
+            ->first();
 
+            
+            if(!$student){
+                session()->flash('success','انت غير مقبول في المدينه');
+                return redirect()->back();
+            }
             $student->room_id = $request->room;
             $student->save();
 
@@ -41,7 +48,7 @@ class roomController extends Controller
             ->whereRaw('occupation < capacity')
             ->get();
 
-        $output ='<option value="">Select Room</option>';
+        $output ='<option value="">اختر غرفة</option>';
         
         foreach($rooms as $room)
         {

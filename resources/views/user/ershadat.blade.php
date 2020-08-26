@@ -4,7 +4,7 @@
 <div class="ershadat">
            <div class="card border-secondary mb-3" style="max-width: 60rem;">
                <div class="card-header text-center"><span class="mdi mdi-view-comfy"> ارشادات التقدم والاقرارات </span> </div>
-               <div class="card-body text-secondary" dir="rtl">
+               <div class="card-body text-secondary">
                         <h5 class="card-title">
                              بناء علي موافقه مجلس  متابعه  الاجراءات التنفذيه للتقدم للمدن الجامعيه يتم علي الطالب اتباع الاتي :
                     <br><br>

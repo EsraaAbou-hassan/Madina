@@ -27,7 +27,7 @@
    
 <img class="img  rounded-circle" src="{{asset('img/BB.jpg')}} ">
    
-    <p><a class="btn btn-secondary" href="/tasgilDkholAltalep" role="button">تسجيل دخول الطلاب   &raquo;</a></p>
+    <p><a class="btn btn-secondary" href="/dafiAlmasrofat" role="button">دفع المصروفات &raquo;</a></p>
     
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">

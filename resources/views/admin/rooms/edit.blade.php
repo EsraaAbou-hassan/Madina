@@ -48,15 +48,15 @@
                   <label for="building_name">اسم المبنى</label>
                         <select name="building_name" id="building_name"  class=" form-control @error('building_name') is-invalid @enderror" 
                         value="{{$room->building_name}}">
-                                        <option value=""></option>
-                                        <option value="مبني ه">مبني ه</option>
-                                        <option value="مبني ز">مبني ز</option>
-                                        <option value="مبني ج">مبني ج</option>
-                                        <option value="مبني ب">مبني ب</option>
-                                        <option value="مبني ح">مبني ح</option>
-                                        <option value="مبني د">مبني د</option>
-                                        <option value="مبني أ">مبني أ</option>
-                                        <option value="مبني و">مبني و</option>
+                        <option value=""></option>
+                            <option value="أ">أ</option>
+                            <option value="ب">ب</option>
+                            <option value="ج">ج</option>
+                            <option value="ح">ح</option>
+                            <option value="د">د</option>
+                            <option value="ز">ز</option>
+                            <option value="ه">ه</option>
+                            <option value="و">و</option>
                       </select>       
                         
                         @error('building_name')
@@ -68,13 +68,14 @@
                     <select name="floor_number" id="floor_number"  class=" form-control @error('floor_number') is-invalid @enderror" 
                     data-dependent="floor_number" value="{{$room->floor_number}}">
                                
-                                 <option value=""></option>
-                                  <option  value="الدور الأرضي">الدور  الارضي </option>
-                                  <option   value="الدور الأول">الدور  الاول </option>
-                                  <option   value="الدور الثاني">الدور  الثاني </option>
-                                  <option   value="الدور الثالث">الدور الثالث</option>
-                                  <option  value="الدور الرابع">الدور الرابع </option>
-                                  <option   value="الدور الخامس">الدور الخامس</option>
+                    <option value=""></option>
+                          <option  value="0">الدور  الارضي </option>
+                          <option   value="1">الدور  الاول </option>
+                          <option   value="2">الدور  الثاني </option>
+                          <option   value="3">الدور الثالث</option>
+                          <option  value="4">الدور الرابع </option>
+                          <option   value="5">الدور الخامس</option>
+                       </select>              
                        </select>  
                     @error('floor_number')
                             <div class="alert alert-danger">{{ $message }}</div>

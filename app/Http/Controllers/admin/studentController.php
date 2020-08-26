@@ -56,7 +56,7 @@ class studentController extends Controller
 
     public function accept($id)
     {
-        $student = student::where('id', $id)
+        $student = student::with('room')->where('id', $id)
             ->update(['is_accepted' => 1]);
          
         return redirect('admin/students');

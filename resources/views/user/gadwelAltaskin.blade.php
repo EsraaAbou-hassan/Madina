@@ -91,7 +91,7 @@
             </tfoot>
         </table>
         
-        <table class="rr">
+        <!-- <table class="rr">
             <thead>
                 <tr>
                     <th> الفرقة</th>
@@ -127,7 +127,7 @@
              <tfoot >
                 <tr>
                     <td colspan="3">جدول تسكين الطلاب المستحدثين</td>
-                </tr>
+                </tr> -->
             </tfoot>
                   
                    

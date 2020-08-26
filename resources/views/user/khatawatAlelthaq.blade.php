@@ -3,7 +3,7 @@
 @section('content')
 <form>
           <fieldset class="khatawat">
-            <div ><legend> خطوات الإلتحاق </legend></div>
+            <div > خطوات الإلتحاق </div>
        
           <ol >
              <li>

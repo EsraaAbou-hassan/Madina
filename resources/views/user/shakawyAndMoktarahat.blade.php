@@ -1,11 +1,14 @@
 @extends('layouts.user')
 @section('title','شكاوي ومقترحات')
 @section('content')
-  <form  class="shakawy">
+  <form  class="shakawy" action="/shakawyAndMoktarahat" method="post"  enctype="multipart/form-data">
+  @csrf
+    <div class="container">
         
-       <div class="hh"><label>اكتب شكوى او اقتراح </label>
-        <br><br>
-      <textarea rows="20" cols="100"></textarea></div>
-     <div> <button type="submit" class="btn btn-primary mb-2">  ارسال </button></div>
-       </form>
+       <h1>اكتب شكوى او اقتراح </h1>
+        
+      <textarea rows="20" cols="100" name="shakwa" value="shakwa"></textarea>
+      <button type="submit" class="btn btn-primary mb-2">  ارسال </button>
+    </div>  
+  </form>
 @endsection

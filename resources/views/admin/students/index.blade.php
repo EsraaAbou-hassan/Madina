@@ -39,6 +39,9 @@
                       <th>الإسم</th>
                       <th>الإيميل</th>
                       <th>الصورة الشخصية</th>
+                      <th>اسم المبني </th>
+                      <th> رقم الدور</th>
+                      <th>رقم الغرفة </th>
                       <th>تاريخ الإنشاء</th>
                       <th>حالة الطلب</th>
                       <th>العمليات</th>
@@ -52,6 +55,21 @@
                             <td>{{$student->student_name}}</td>
                             <td>{{$student->email}}</td>
                             <td><img src="{{asset('storage/'. $student->peciture)}}" ></td>
+                            <td>
+                                @if(isset($student->room))
+                                      {{$student->room['building_name']}}
+                                @endif
+                            </td>
+                            <td>
+                                @if(isset($student->room))
+                                    {{$student->room['floor_number']}}
+                                @endif
+                            </td>
+                            <td>
+                                @if(isset($student->room))
+                                    {{$student->room['room_number']}}
+                                @endif
+                            </td>
                             <td>{{$student->created_at}}</td>
                             <td >
                               @if ($student->is_accepted == 1)
